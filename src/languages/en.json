@@ -1,0 +1,67 @@
+{
+  "global": {
+    "name": "Warsaw Shop Expo",
+    "date": "June 17-19, 2020",
+    "firstDay": "June 17 (Wednesday) 10:00 - 16:00",
+    "secondDay": "June 18 (Thursday) 10:00 - 16:00",
+    "thirdDay": "June 19 (Friday) 10:00 - 15:00"
+  },
+  "home": {
+    "title": "Home",
+    "tillTheFair": "It remains to the fair:",
+    "timer": {
+      "date": "June 17, 2020",
+      "days": "d",
+      "hours": "h",
+      "minutes": "m",
+      "seconds": "s"
+    },
+    "soldStands": "of sold stands",
+    "registeredVisitors": "registered visitors",
+    "partner": "Trade fair partner",
+    "description": "The International Trade Fair of Equipment and Accessories for Commercial Facilities and Networks is a new look at trade fairs related to comprehensive store supply. The Warsaw Shop Expo is a 3-day holiday of the retail industry, where you will see producers and distributors: furnishing stores, cleaning machines, catering equipment, refrigerated counters, bakery ovens, money transfer devices and goods security systems.",
+    "thematicZones": "Thematic zones",
+    "thematicZoneTitles": [
+      "Store equipment zone",
+      "Marketing and services zone",
+      "Hygiene zone",
+      "Gastro zone",
+      "Cleaning zone",
+      "Vending zone",
+      "Warehouse zone",
+      "Furniture zone"
+    ],
+    "thematicZoneItems": [
+      ["checkout boxes", "shop shelves", "shopping carts", "lighting"],
+      [
+        "IT programs",
+        "e-commers zone",
+        "money transfer",
+        "decor",
+        "loyalty programs",
+        "OHS and fire protection"
+      ],
+      ["bathroom fittings", "hand dryers", "litter bins"],
+      ["refrigeration equipment", "bakery equipment"],
+      ["cleaning machines", "chemical products"],
+      ["vending machines"],
+      ["storage shelves", "forklifts", "ladder", "increases"],
+      ["office furniture", "shop furniture (islands)"]
+    ]
+  },
+  "forVisitors": {
+    "title": "For visitors"
+  },
+  "forExhibitors": {
+    "title": "For exhibitors"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "buttons": {
+    "register": "Register",
+    "registerBottom": "Get a free ticket",
+    "becomeAnExhibitor": "Become an Exhibitor",
+    "oneLineRegister": "Receive the invitation - now!"
+  }
+}

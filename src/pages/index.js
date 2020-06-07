@@ -1,22 +1,65 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
+import {
+  useIntl,
+  Link,
+  IntlContextConsumer,
+  changeLocale,
+} from "gatsby-plugin-intl"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "layouts/Layout"
+import Image from "components/image"
+import SEO from "utils/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+import Header from "components/index/Header"
+import StickyBar from "components/index/StickyBar"
+
+const languageName = {
+  pl: "Polski",
+  en: "English",
+}
+
+const Text = styled.p`
+  font-size: 50px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.primary};
+`
+
+const IndexPage = () => {
+  const intl = useIntl()
+
+  return (
+    <Layout>
+      <SEO
+        title={`${intl.formatMessage({
+          id: "global.name",
+        })} - ${intl.formatMessage({ id: "home.title" })}`}
+      />
+      <Header />
+      <StickyBar />
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Image />
+      </div>
+      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Text>{intl.formatMessage({ id: "global.date" })}</Text>
+      <IntlContextConsumer>
+        {({ languages, language: currentLocale }) =>
+          languages.map(language => (
+            <a
+              key={language}
+              onClick={() => changeLocale(language)}
+              style={{
+                color: currentLocale === language ? `red` : `black`,
+                cursor: `pointer`,
+              }}
+            >
+              {languageName[language]}
+            </a>
+          ))
+        }
+      </IntlContextConsumer>
+    </Layout>
+  )
+}
 
 export default IndexPage

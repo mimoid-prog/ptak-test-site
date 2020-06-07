@@ -1,0 +1,67 @@
+{
+  "global": {
+    "name": "Warsaw Shop Expo",
+    "date": "17-19 czerwca 2020",
+    "firstDay": "17 czerwca (środa) 10:00 - 16:00",
+    "secondDay": "18 czerwca (czwartek) 10:00 - 16:00",
+    "thirdDay": "19 czerwca (piątek) 10:00 - 15:00"
+  },
+  "home": {
+    "title": "Strona główna",
+    "tillTheFair": "Do targów pozostało:",
+    "timer": {
+      "date": "June 17, 2020",
+      "days": "d",
+      "hours": "g",
+      "minutes": "m",
+      "seconds": "s"
+    },
+    "soldStands": "sprzedanych stoisk",
+    "registeredVisitors": "zarejestrowanych odwiedzających",
+    "partner": "Partner targów",
+    "description": "Międzynarodowe Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych to nowe spojrzenie na targi o tematyce związanej z kompleksowym zaopatrzeniem sklepów. Warsaw Shop Expo to 3 dniowe święto branży retail, na której będzie można zobaczyć producentów i dystrybutorów: wyposażanie sklepów, maszyn czyszczących, urządzeń gastronomicznych, lad chłodniczych, pieców piekarniczych, urządzeń do przesyłu pieniędzy czy systemów zabezpieczenia towarów.",
+    "thematicZones": "Strefy tematyczne",
+    "thematicZoneTitles": [
+      "Strefa wyposażenia sklepów",
+      "Strefa marketingu i usług",
+      "Strefa higieny",
+      "Strefa Gastro",
+      "Strefa czyszczenia",
+      "Strefa vendingowa",
+      "Strefa magazynowa",
+      "Strefa mebli"
+    ],
+    "thematicZoneItems": [
+      ["boksy kasowe", "regały sklepowe", "wózki sklepowe", "oświetlenie"],
+      [
+        "programy IT",
+        "strefa e-commerce",
+        "przesył pieniędzy",
+        "dekoracje",
+        "programy lojalnościowe",
+        "BHP i P.Poż"
+      ],
+      ["armatura łazienkowa", "suszarki do rąk", "kosze na śmieci"],
+      ["urządzenia chłodnicze", "urządzenia piekarnicze"],
+      ["maszyny czyszczące", "produkty chemiczne"],
+      ["automaty vendingowe"],
+      ["regały magazynowe", "wózki widłowe", "drabiny", "zwyżki"],
+      ["meble biurowe", "meble sklepowe (wyspy)"]
+    ]
+  },
+  "forVisitors": {
+    "title": "Dla odwiedzających"
+  },
+  "forExhibitors": {
+    "title": "Dla wystawców"
+  },
+  "contact": {
+    "title": "Kontakt"
+  },
+  "buttons": {
+    "register": "Zarejestruj się",
+    "registerBottom": "Odbierz darmowy bilet",
+    "becomeAnExhibitor": "Zostań wystawcą",
+    "oneLineRegister": "Odbierz zaproszenie - teraz!"
+  }
+}

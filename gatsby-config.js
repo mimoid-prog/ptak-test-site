@@ -1,8 +1,10 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Testowa strona`,
+    description: `Testowa strona dla Ptak Warsaw Expo`,
+    author: `Mateusz Szkop`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +13,28 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        src: path.join(__dirname, "src"),
+        pages: path.join(__dirname, "src/pages"),
+        components: path.join(__dirname, "src/components"),
+        images: path.join(__dirname, "src/images"),
+        layouts: path.join(__dirname, "src/layouts"),
+        styles: path.join(__dirname, "src/styles"),
+        utils: path.join(__dirname, "src/utils"),
+        fonts: path.join(__dirname, "src/fonts"),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/languages`,
+        languages: [`pl`, `en`],
+        defaultLanguage: `pl`,
+        redirect: false,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,6 +51,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
