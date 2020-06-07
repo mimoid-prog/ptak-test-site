@@ -3,27 +3,27 @@ import { Container, SecondaryButton } from "styles/GlobalStyles"
 import * as S from "./StickyBarStyles"
 import { useIntl } from "gatsby-plugin-intl"
 
-S.Container = Container
-S.SecondaryButton = SecondaryButton
+// S.Container = Container
+// S.SecondaryButton = SecondaryButton
 
 const StickyBar = () => {
   const intl = useIntl()
 
   return (
     <S.StickyBar>
-      <S.Container>
+      <Container>
         <S.StickyBarInner>
           <div>
             <p>35% {intl.formatMessage({ id: "home.soldStands" })}</p>
             <p>1714 {intl.formatMessage({ id: "home.registeredVisitors" })}</p>
           </div>
           <div>
-            <S.SecondaryButton>
+            <SecondaryButton>
               {intl.formatMessage({ id: "buttons.oneLineRegister" })}
-            </S.SecondaryButton>
+            </SecondaryButton>
           </div>
         </S.StickyBarInner>
-      </S.Container>
+      </Container>
     </S.StickyBar>
   )
 }
