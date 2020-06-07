@@ -7,7 +7,7 @@ import {
   changeLocale,
 } from "gatsby-plugin-intl"
 
-import Layout from "layouts/Layout"
+import MainLayout from "layouts/MainLayout"
 import Image from "components/image"
 import SEO from "utils/seo"
 
@@ -29,7 +29,7 @@ const IndexPage = () => {
   const intl = useIntl()
 
   return (
-    <Layout>
+    <MainLayout>
       <SEO
         title={`${intl.formatMessage({
           id: "global.name",
@@ -58,7 +58,7 @@ const IndexPage = () => {
           ))
         }
       </IntlContextConsumer>
-    </Layout>
+    </MainLayout>
   )
 }
 
