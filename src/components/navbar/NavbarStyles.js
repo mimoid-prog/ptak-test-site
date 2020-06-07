@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { Container } from "styles/GlobalStyles"
+import UKFlag from "images/uk.svg"
+import PLFlag from "images/pl.svg"
 
 export const Navbar = styled.div``
 
@@ -25,11 +27,16 @@ export const OpenBtn = styled.button`
   border: none;
   padding: 8px;
   box-sizing: content-box;
+  cursor: pointer;
 
   div {
     width: 40px;
     height: 4px;
     background-color: white;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    display: none;
   }
 `
 
@@ -37,12 +44,13 @@ export const CloseBtn = styled.button`
   background: transparent;
   border: none;
   position: absolute;
-  right: 0;
+  right: 6px;
   top: 24px;
   width: 32px;
   height: 32px;
   padding: 8px;
   box-sizing: content-box;
+  cursor: pointer;
 
   & > div {
     position: relative;
@@ -68,6 +76,10 @@ export const CloseBtn = styled.button`
       }
     }
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    display: none;
+  }
 `
 
 export const Navigation = styled.nav`
@@ -92,17 +104,71 @@ export const Navigation = styled.nav`
   }
 
   li {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   a {
     color: white;
-    font-weight: 700;
     text-decoration: none;
     font-size: 18px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    transform: translateX(0);
+    background: transparent;
+    position: static;
+    width: auto;
+
+    ul {
+      flex-direction: row;
+      min-height: auto;
+      align-items: center;
+    }
+
+    li {
+      margin: 0 20px 0 0;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    li {
+      margin: 0 30px 0 0;
+    }
   }
 `
 
 export const NavigationContainer = styled(Container)`
   position: relative;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: auto;
+    margin: auto;
+  }
+`
+
+export const LanguageLink = styled.a`
+  display: inline-block;
+  margin-right: ${({ length }) => (length === 2 ? "0px" : "20px")};
+`
+
+export const EN = styled(UKFlag)`
+  width: 40px;
+  cursor: pointer;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 30px;
+  }
+`
+export const PL = styled(PLFlag)`
+  width: 40px;
+  cursor: pointer;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 30px;
+  }
 `

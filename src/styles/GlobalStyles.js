@@ -15,15 +15,23 @@ export const BasicButton = styled.button`
   padding: 15px 25px;
   display: inline-block;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
 `
 
 export const PrimaryButton = styled(BasicButton)`
-  background: ${({ theme }) => theme.colors.primary};
-  font-weight: 700;
+  background-color: ${({ theme }) => theme.colors.primary};
   color: white;
 
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primaryDark};
+  }
+
+  span:first-child {
+    font-weight: 700;
+  }
+
   span:last-child {
-    font-weight: 400;
     display: block;
     margin-top: 4px;
   }
@@ -32,4 +40,8 @@ export const PrimaryButton = styled(BasicButton)`
 export const SecondaryButton = styled(BasicButton)`
   background: white;
   color: black;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.whiteDark};
+  }
 `

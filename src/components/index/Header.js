@@ -1,7 +1,7 @@
 import React from "react"
 import * as S from "./HeaderStyles"
 import { Container, PrimaryButton } from "styles/GlobalStyles"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, Link } from "gatsby-plugin-intl"
 import Navbar from "components/navbar/Navbar"
 import Logo from "images/logo.png"
 import Countdown from "react-countdown"
@@ -50,7 +50,7 @@ const Header = () => {
         <S.Logo src={Logo} alt="Warsaw Shop Expo Logo" />
         <h1>{intl.formatMessage({ id: "global.name" })}</h1>
         <h2>{intl.formatMessage({ id: "global.date" })}</h2>
-        <PrimaryButton>
+        <PrimaryButton as={Link} to="/rejestracja">
           <span>{intl.formatMessage({ id: "buttons.register" })}</span>
           <span>{intl.formatMessage({ id: "buttons.registerBottom" })}</span>
         </PrimaryButton>

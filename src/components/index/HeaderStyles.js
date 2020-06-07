@@ -23,7 +23,32 @@ export const Header = styled.div`
       margin-right: 6px;
     }
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 20px 0 60px;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    .timer {
+      font-size: 1.2em;
+    }
+  }
 `
 export const Logo = styled.img`
   max-width: 250px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin-top: 30px;
+    max-width: 300px;
+  }
 `
