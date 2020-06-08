@@ -102,6 +102,7 @@ export const Content = styled.div`
 
     li {
       flex-direction: row;
+      justify-content: center;
       text-align: left;
       margin-bottom: 0;
     }
