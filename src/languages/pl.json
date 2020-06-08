@@ -58,6 +58,16 @@
   "contact": {
     "title": "Kontakt"
   },
+  "footer": {
+    "headingOne": "Targi / Konferencje / Eventy",
+    "headingTwo": "Stolica targów",
+    "listItemOne": "Doświadczony <span>zespół</span>",
+    "listItemTwo": "Profesjonalizm i <span>kompleksowość</span>",
+    "listItemThree": "Doskonała <span>lokalizacja</span>",
+    "listItemFour": "Innowacyjny system <span>wystawienniczy</span>",
+    "linkOne": "Polityka prywatności",
+    "linkTwo": "Regulamin"
+  },
   "buttons": {
     "register": "Zarejestruj się",
     "registerBottom": "Odbierz darmowy bilet",

@@ -24,6 +24,12 @@ export const Header = styled.div`
     }
   }
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: 20px 0 60px;
 

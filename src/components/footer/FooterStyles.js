@@ -1,0 +1,177 @@
+import styled from "styled-components"
+import footerBg from "images/footer-bg.jpg"
+
+export const Footer = styled.footer``
+
+export const Content = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${footerBg});
+  color: white;
+  padding: 30px 0 40px;
+
+  img {
+    width: 120px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-top: 30px;
+  }
+
+  h3 {
+    color: #c5a25c;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    margin-top: 0.5em;
+    margin-bottom: 26px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  svg {
+    height: 50px;
+    margin-right: 14px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    text-align: center;
+
+    ul {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    h3 {
+      font-size: 3.4em;
+      margin-bottom: 0.8em;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    li {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    svg {
+      margin-right: 0;
+      margin-bottom: 6px;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    text-align: left;
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    h3 {
+      font-size: 4.2em;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 45px 0 60px;
+
+    h3 {
+      font-size: 5.2em;
+    }
+
+    li {
+      flex-direction: row;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    svg {
+      margin-right: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    text-align: center;
+    padding: 60px 0 80px;
+    background-size: cover;
+
+    h3 {
+      font-size: 6em;
+    }
+
+    li {
+      font-size: 1.1em;
+    }
+
+    svg {
+      height: 60px;
+    }
+  }
+`
+
+export const Photos = styled.div`
+  display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      border: 1px solid white;
+    }
+  }
+`
+
+export const BottomBar = styled.div`
+  width: 100%;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  padding: 30px 0 40px;
+
+  p {
+    margin: 28px 0 0px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: white;
+  }
+`

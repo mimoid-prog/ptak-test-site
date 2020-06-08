@@ -58,6 +58,16 @@
   "contact": {
     "title": "Contact"
   },
+  "footer": {
+    "headingOne": "Trade fairs / Conferences / Events",
+    "headingTwo": "Trade fair capital",
+    "listItemOne": "Experienced <span>team</span>",
+    "listItemTwo": "Professionalism and <span>comprehensiveness</span>",
+    "listItemThree": "Perfect <span>location</span>",
+    "listItemFour": "Innovative exhibition <span>system</span>",
+    "linkOne": "Pravicy policy",
+    "linkTwo": "Regulations"
+  },
   "buttons": {
     "register": "Register",
     "registerBottom": "Get a free ticket",

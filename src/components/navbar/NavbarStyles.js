@@ -87,7 +87,7 @@ export const Navigation = styled.nav`
   position: fixed;
   right: 0;
   top: 0;
-  background: black;
+  background: #1c1c1c;
   z-index: 2;
   transform: ${({ isActive }) =>
     isActive ? "translateX(0)" : "translateX(100%)"};
@@ -111,6 +111,10 @@ export const Navigation = styled.nav`
     color: white;
     text-decoration: none;
     font-size: 18px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 400px;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {

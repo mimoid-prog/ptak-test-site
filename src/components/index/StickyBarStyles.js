@@ -4,6 +4,11 @@ export const StickyBar = styled.div`
   background: ${({ theme }) => theme.colors.secondary};
   padding: 12px 0;
   color: white;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    position: sticky;
+    top: 0;
+  }
 `
 
 export const StickyBarInner = styled.div`

@@ -44,6 +44,8 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style-position: inside;
+    margin: 0;
+    padding: 0;
   }
 `
 

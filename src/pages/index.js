@@ -4,6 +4,7 @@ import MainLayout from "layouts/MainLayout"
 import SEO from "utils/seo"
 import Header from "components/index/Header"
 import StickyBar from "components/index/StickyBar"
+import Footer from "components/footer/Footer"
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -20,6 +21,7 @@ const IndexPage = () => {
       <h1 style={{ textAlign: "center", fontSize: "60px", color: "#e6e6e6" }}>
         PTAK WARSAW EXPO
       </h1>
+      <Footer />
     </MainLayout>
   )
 }
