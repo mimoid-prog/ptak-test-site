@@ -82,6 +82,10 @@
     "title": "Register",
     "desc": "and get a free ticket"
   },
+  "becomeAnExhibitor": {
+    "title": "Become an Exhibitor",
+    "desc": "Please fill out the form below and our dedicated team will contact you regarding the possible cooperation"
+  },
   "footer": {
     "headingOne": "Trade fairs / Conferences / Events",
     "headingTwo": "Trade fair capital",

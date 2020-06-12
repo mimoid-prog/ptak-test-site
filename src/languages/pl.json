@@ -82,6 +82,10 @@
     "title": "Zarejestruj się",
     "desc": "i odbierz bezpłatne zaproszenie"
   },
+  "becomeAnExhibitor": {
+    "title": "Zostań wystawcą",
+    "desc": "Wypełnij poniższyj formularz, a my skontaktujemy się z tobą, żeby ustalić szczegóły współpracy"
+  },
   "footer": {
     "headingOne": "Targi / Konferencje / Eventy",
     "headingTwo": "Stolica targów",

@@ -45,7 +45,8 @@ export const FormBox = styled.div`
     margin: 0;
   }
 
-  h4 {
+  h4,
+  & > p {
     margin-top: 8px;
   }
 `
