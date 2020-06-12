@@ -3,4 +3,5 @@ export default {
   primaryDark: "#2f995d",
   secondary: "#008682",
   whiteDark: "#ededed",
+  error: "#fa5246",
 }

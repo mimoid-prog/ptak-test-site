@@ -9,6 +9,9 @@ import { PrimaryButton } from "styles/GlobalStyles"
 import * as S from "./NavbarStyles"
 import ptakLogo from "images/ptak-white.png"
 
+const GS = {}
+GS.PrimaryButton = PrimaryButton
+
 const Navbar = () => {
   const intl = useIntl()
   const [isActive, setIsActive] = useState(false)
@@ -16,7 +19,9 @@ const Navbar = () => {
   return (
     <S.Navbar>
       <S.NavbarContent>
-        <img src={ptakLogo} alt="Ptak Warsaw Expo Logo" />
+        <Link to="/">
+          <img src={ptakLogo} alt="Ptak Warsaw Expo Logo" />
+        </Link>
         <S.OpenBtn onClick={() => setIsActive(true)}>
           <div></div>
           <div></div>
@@ -26,36 +31,33 @@ const Navbar = () => {
           <S.NavigationContainer>
             <ul>
               <li>
-                <Link to="/page-2">
-                  {intl.formatMessage({ id: "home.title" })}
-                </Link>
+                <Link to="/">{intl.formatMessage({ id: "home.title" })}</Link>
               </li>
               <li>
-                <Link to="/page-2">
+                <Link to="/for-visitors">
                   {intl.formatMessage({ id: "forVisitors.title" })}
                 </Link>
               </li>
               <li>
-                <Link to="/page-2">
+                <Link to="/for-exhibitors">
                   {intl.formatMessage({ id: "forExhibitors.title" })}
                 </Link>
               </li>
               <li>
-                <Link to="/page-2">
+                <Link to="/contact">
                   {intl.formatMessage({ id: "contact.title" })}
                 </Link>
               </li>
               <li>
-                <PrimaryButton as="a" to="/page-2">
+                <GS.PrimaryButton to="/become-an-exhibitor">
                   {intl.formatMessage({ id: "buttons.becomeAnExhibitor" })}
-                </PrimaryButton>
+                </GS.PrimaryButton>
               </li>
               <li>
                 <IntlContextConsumer>
-                  {({ languages, language: currentLocale }) => {
-                    console.log(languages.length, currentLocale)
-                    return languages.map((language, i) => (
-                      <>
+                  {({ languages, language: currentLocale }) =>
+                    languages.map((language, i) => (
+                      <React.Fragment key={i}>
                         {language !== currentLocale && (
                           <S.LanguageLink
                             key={language}
@@ -66,9 +68,9 @@ const Navbar = () => {
                             {language === "en" && <S.EN />}
                           </S.LanguageLink>
                         )}
-                      </>
+                      </React.Fragment>
                     ))
-                  }}
+                  }
                 </IntlContextConsumer>
               </li>
             </ul>

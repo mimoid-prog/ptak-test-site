@@ -11,11 +11,7 @@ const IndexPage = () => {
 
   return (
     <MainLayout>
-      <SEO
-        title={`${intl.formatMessage({
-          id: "global.name",
-        })} - ${intl.formatMessage({ id: "home.title" })}`}
-      />
+      <SEO title={intl.formatMessage({ id: "global.name" })} />
       <Header />
       <StickyBar />
       <h1 style={{ textAlign: "center", fontSize: "60px", color: "#e6e6e6" }}>

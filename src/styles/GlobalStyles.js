@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby-plugin-intl"
 
 export const Container = styled.div`
   width: 85%;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   }
 `
 
-export const BasicButton = styled.button`
+export const BasicButton = styled(Link)`
   border: none;
   border-radius: 3px;
   padding: 15px 25px;

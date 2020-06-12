@@ -6,8 +6,9 @@ import Navbar from "components/navbar/Navbar"
 import Logo from "images/logo.png"
 import Countdown from "react-countdown"
 
-// S.Container = Container
-// S.PrimaryButton = PrimaryButton
+const GS = {}
+GS.Container = Container
+GS.PrimaryButton = PrimaryButton
 
 const Header = () => {
   const intl = useIntl()
@@ -45,22 +46,22 @@ const Header = () => {
 
   return (
     <S.Header>
-      <Container>
+      <GS.Container>
         <Navbar />
         <S.Logo src={Logo} alt="Warsaw Shop Expo Logo" />
         <h1>{intl.formatMessage({ id: "global.name" })}</h1>
         <h2>{intl.formatMessage({ id: "global.date" })}</h2>
-        <PrimaryButton as={Link} to="/rejestracja">
+        <GS.PrimaryButton as={Link} to="/registration">
           <span>{intl.formatMessage({ id: "buttons.register" })}</span>
           <span>{intl.formatMessage({ id: "buttons.registerBottom" })}</span>
-        </PrimaryButton>
+        </GS.PrimaryButton>
         <h4>{intl.formatMessage({ id: "home.tillTheFair" })}</h4>
         <Countdown
           date={timerDateInMiliseconds}
           daysInHours={false}
           renderer={renderer}
         />
-      </Container>
+      </GS.Container>
     </S.Header>
   )
 }

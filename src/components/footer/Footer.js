@@ -2,6 +2,7 @@ import React from "react"
 import { useIntl, FormattedHTMLMessage } from "gatsby-plugin-intl"
 import * as S from "./FooterStyles"
 import { Container } from "styles/GlobalStyles"
+import FooterBar from "./FooterBar"
 import img1 from "images/footer-img-1.jpg"
 import img2 from "images/footer-img-2.jpg"
 import img3 from "images/footer-img-3.jpg"
@@ -55,17 +56,7 @@ const Footer = () => {
         <img src={img5} alt="ptak" />
         <img src={img6} alt="ptak" />
       </S.Photos>
-      <S.BottomBar>
-        <p>© 2020 Ptak Warsaw Expo</p>
-        <ul>
-          <li>
-            <a href="#">{intl.formatMessage({ id: "footer.linkOne" })}</a>
-          </li>
-          <li>
-            <a href="#">{intl.formatMessage({ id: "footer.linkTwo" })}</a>
-          </li>
-        </ul>
-      </S.BottomBar>
+      <FooterBar />
     </S.Footer>
   )
 }

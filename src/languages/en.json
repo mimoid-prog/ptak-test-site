@@ -1,6 +1,7 @@
 {
   "global": {
     "name": "Warsaw Shop Expo",
+    "desc": "Trade Fair of Equipment and Accessories for Commercial Facilities and Networks",
     "date": "June 17-19, 2020",
     "firstDay": "June 17 (Wednesday) 10:00 - 16:00",
     "secondDay": "June 18 (Thursday) 10:00 - 16:00",
@@ -58,6 +59,29 @@
   "contact": {
     "title": "Contact"
   },
+  "form": {
+    "company": "Company",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "nip": "TAX ID",
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "max": "Maximum number of characters exceeded",
+    "button": "Submit",
+    "consentOne": "I agree to the processing by PWE.",
+    "consentTwo": "I agree to the processing by PWE.",
+    "showLess": "Less",
+    "showMore": "More",
+    "consentOneText": "I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) e-mail address; 3) telephone number for the purposes of sending marketing and commercial messages related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of electronic communication or direct remote communication, including receiving commercial information, pursuant to the Act of 18 July 2002 on the provision of services by electronic means. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.",
+    "consentTwoText": "I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) telephone number for marketing purposes related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of terminal telecommunications equipment within the meaning of article 172 of the Act of 16 July 2014 - Telecommunications law. I know that consent is voluntary, but necessary for registration. I can withdraw my consent at any time. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.",
+    "secured": "Secured form",
+    "error": "An error occured. Try again."
+  },
+  "registration": {
+    "title": "Register",
+    "desc": "and get a free ticket"
+  },
   "footer": {
     "headingOne": "Trade fairs / Conferences / Events",
     "headingTwo": "Trade fair capital",
@@ -65,7 +89,7 @@
     "listItemTwo": "Professionalism and <span>comprehensiveness</span>",
     "listItemThree": "Perfect <span>location</span>",
     "listItemFour": "Innovative exhibition <span>system</span>",
-    "linkOne": "Pravicy policy",
+    "linkOne": "Privacy policy",
     "linkTwo": "Regulations"
   },
   "buttons": {

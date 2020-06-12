@@ -92,6 +92,7 @@ export const Navigation = styled.nav`
   transform: ${({ isActive }) =>
     isActive ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.4s ease;
+  text-align: center;
 
   ul {
     display: flex;
@@ -105,6 +106,10 @@ export const Navigation = styled.nav`
 
   li {
     margin-bottom: 40px;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
   a {

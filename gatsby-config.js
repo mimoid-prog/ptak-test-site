@@ -34,7 +34,7 @@ module.exports = {
         path: `${__dirname}/src/languages`,
         languages: [`pl`, `en`],
         defaultLanguage: `pl`,
-        redirect: false,
+        redirect: true,
       },
     },
     `gatsby-transformer-sharp`,
