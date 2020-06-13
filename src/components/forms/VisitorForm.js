@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "gatsby-plugin-intl"
 import * as Yup from "yup"
 import * as S from "./FormStyles"
 import { Formik, Form } from "formik"
@@ -7,6 +7,7 @@ import Input from "./elements/Input"
 import Consent from "./elements/Consent"
 import Loader from "components/Loader"
 import { PrimaryButton } from "styles/GlobalStyles"
+import axios from "axios"
 
 const GS = {}
 GS.PrimaryButton = PrimaryButton
@@ -25,8 +26,8 @@ const VisitorForm = () => {
         email: "",
         phone: "",
         nip: "",
-        consentOne: false,
-        consentTwo: false,
+        consentOne: true,
+        consentTwo: true,
       }}
       validationSchema={Yup.object({
         company: Yup.string()
@@ -37,6 +38,7 @@ const VisitorForm = () => {
           .required(intl.formatMessage({ id: "form.required" })),
         email: Yup.string()
           .email(intl.formatMessage({ id: "form.invalidEmail" }))
+          .max(40, intl.formatMessage({ id: "form.max" }))
           .required(intl.formatMessage({ id: "form.required" })),
         phone: Yup.string()
           .max(12, intl.formatMessage({ id: "form.max" }))
@@ -53,10 +55,22 @@ const VisitorForm = () => {
       })}
       onSubmit={(values, { setSubmitting }) => {
         setIsLoading(true)
+        setErrorMessage("")
         setSubmitting(false)
-        setErrorMessage(intl.formatMessage({ id: "form.error" }))
-
-        console.log(values)
+        axios
+          .post("/api/visitor", { values })
+          .then(res => {
+            setIsLoading(false)
+            navigate("/visitor-registration/confirmation", {
+              state: {
+                qr: res.data.qr,
+              },
+            })
+          })
+          .catch(err => {
+            setIsLoading(false)
+            setErrorMessage(intl.formatMessage({ id: "form.error" }))
+          })
       }}
     >
       <Form>

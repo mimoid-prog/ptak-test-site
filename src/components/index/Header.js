@@ -51,7 +51,7 @@ const Header = () => {
         <S.Logo src={Logo} alt="Warsaw Shop Expo Logo" />
         <h1>{intl.formatMessage({ id: "global.name" })}</h1>
         <h2>{intl.formatMessage({ id: "global.date" })}</h2>
-        <GS.PrimaryButton as={Link} to="/registration">
+        <GS.PrimaryButton as={Link} to="/visitor-registration">
           <span>{intl.formatMessage({ id: "buttons.register" })}</span>
           <span>{intl.formatMessage({ id: "buttons.registerBottom" })}</span>
         </GS.PrimaryButton>

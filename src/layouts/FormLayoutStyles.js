@@ -4,10 +4,10 @@ import headerBg from "images/header-bg.jpg"
 export const FormLayoutWrapper = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${headerBg});
-  padding: 10px 0 40px;
+  padding-bottom: 40px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    padding: 20px 0 60px;
+    padding-bottom: 60px;
   }
 `
 
@@ -16,7 +16,7 @@ export const FormLayoutContent = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     & > div:first-child {
-      width: 380px;
+      width: 420px;
       margin: 0 auto;
     }
   }
@@ -31,7 +31,7 @@ export const FormLayoutContent = styled.div`
     }
 
     & > div {
-      width: 380px;
+      width: 420px;
     }
   }
 `

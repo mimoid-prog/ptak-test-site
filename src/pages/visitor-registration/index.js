@@ -5,21 +5,21 @@ import FormLayout from "layouts/FormLayout"
 import SEO from "utils/seo"
 import VisitorForm from "components/forms/VisitorForm"
 
-const Registration = () => {
+const VisitorRegistration = () => {
   const intl = useIntl()
 
   return (
     <FormLayout>
       <SEO
         title={`${intl.formatMessage({
-          id: "registration.title",
+          id: "visitorRegistration.title",
         })} - ${intl.formatMessage({ id: "global.name" })}`}
       />
-      <h2>{intl.formatMessage({ id: "registration.title" })}</h2>
-      <h4>{intl.formatMessage({ id: "registration.desc" })}</h4>
+      <h2>{intl.formatMessage({ id: "visitorRegistration.title" })}</h2>
+      <h4>{intl.formatMessage({ id: "visitorRegistration.desc" })}</h4>
       <VisitorForm />
     </FormLayout>
   )
 }
 
-export default Registration
+export default VisitorRegistration

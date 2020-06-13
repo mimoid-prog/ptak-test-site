@@ -1,60 +1,54 @@
 import styled from "styled-components"
 import headerBg from "images/header-bg.jpg"
 
+export const SecondaryLayout = styled.div``
+
 export const Header = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${headerBg});
   text-align: center;
   color: white;
   padding-bottom: 40px;
+`
+
+export const HeaderInner = styled.div`
+  h1 {
+    margin-top: 10px;
+  }
 
   h2 {
-    margin-bottom: 40px;
-  }
-
-  h4 {
-    margin-bottom: 5px;
-  }
-
-  .timer {
-    margin-top: 20px;
-
-    span {
-      margin-right: 6px;
-    }
+    margin-bottom: 0;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    h1 {
-      font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+
+    div:first-child {
+      margin-right: 20px;
     }
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    padding-bottom: 60px;
 
     h1 {
-      font-size: 3em;
+      margin-bottom: 12px;
+      margin-top: 0;
     }
 
     h2 {
-      font-size: 2em;
-    }
-
-    h4 {
-      font-size: 1.2em;
-    }
-
-    .timer {
-      font-size: 1.2em;
+      margin-top: 0px;
     }
   }
 `
+
+export const Content = styled.div`
+  padding: 10px 0 40px;
+`
+
 export const Logo = styled.img`
-  max-width: 250px;
+  max-width: 200px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    margin-top: 30px;
-    max-width: 300px;
+    max-width: 250px;
   }
 `

@@ -19,7 +19,7 @@ const StickyBar = () => {
             <p>1714 {intl.formatMessage({ id: "home.registeredVisitors" })}</p>
           </div>
           <div>
-            <GS.SecondaryButton to="/registration">
+            <GS.SecondaryButton to="/visitor-registration">
               {intl.formatMessage({ id: "buttons.oneLineRegister" })}
             </GS.SecondaryButton>
           </div>

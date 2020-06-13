@@ -5,7 +5,11 @@
     "date": "17-19 czerwca 2020",
     "firstDay": "17 czerwca (środa) 10:00 - 16:00",
     "secondDay": "18 czerwca (czwartek) 10:00 - 16:00",
-    "thirdDay": "19 czerwca (piątek) 10:00 - 15:00"
+    "thirdDay": "19 czerwca (piątek) 10:00 - 15:00",
+    "company": "Ptak Warsaw Expo",
+    "street": "al. Katowicka 62",
+    "postal": "05-830",
+    "city": "Nadarzyn"
   },
   "home": {
     "title": "Strona główna",
@@ -78,13 +82,32 @@
     "secured": "Bezpieczny formularz",
     "error": "Wystąpił błąd. Spróbuj ponownie."
   },
-  "registration": {
+  "visitorRegistration": {
     "title": "Zarejestruj się",
     "desc": "i odbierz bezpłatne zaproszenie"
   },
-  "becomeAnExhibitor": {
+  "visitorConfirmation": {
+    "title": "Potwierdzenie rejestracji",
+    "greeting": "Dziękujemy za rejestrację!",
+    "greetingText": "Serdecznie witamy w gronie uczestników targów",
+    "info": "Na podany adres email zostało wysłane potwierdzenie z unikalnym kodem QR który upoważnia do wejścia na teren targów. Możesz go też pobrać przyciskiem niżej.",
+    "downloadQR": "Pobierz kod QR",
+    "openingHours": "Godziny otwarcia:",
+    "openingHoursChange": "*godziny otwarcia mogą ulec zmianie",
+    "farewell": "Do zobaczenia na targach!"
+  },
+  "exhibitorRegistration": {
     "title": "Zostań wystawcą",
     "desc": "Wypełnij poniższyj formularz, a my skontaktujemy się z tobą, żeby ustalić szczegóły współpracy"
+  },
+  "exhibitorConfirmation": {
+    "title": "Potwierdzenie rejestracji",
+    "greeting": "Dziękujemy za rejestrację!",
+    "info": "Informujemy, że celem ustalenia szczegółów Państwa udziału w targach, skontaktuje się Panią/Panem nasz zepsół.",
+    "info2": "Na podany adres email zostało wysłane potwierdzenie rejestracji.",
+    "openingHours": "Godziny otwarcia:",
+    "openingHoursChange": "*godziny otwarcia mogą ulec zmianie",
+    "farewell": "Do zobaczenia na targach!"
   },
   "footer": {
     "headingOne": "Targi / Konferencje / Eventy",

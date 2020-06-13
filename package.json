@@ -4,6 +4,7 @@
   "description": "Test website for Ptak Warsaw Expo",
   "version": "0.1.0",
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "formik": "^2.1.4",
     "gatsby": "^2.22.15",

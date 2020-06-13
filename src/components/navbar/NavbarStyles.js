@@ -3,7 +3,13 @@ import { Container } from "styles/GlobalStyles"
 import UKFlag from "images/uk.svg"
 import PLFlag from "images/pl.svg"
 
-export const Navbar = styled.div``
+export const Navbar = styled.div`
+  padding-top: 10px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding-top: 20px;
+  }
+`
 
 export const NavbarContent = styled.div`
   display: flex;

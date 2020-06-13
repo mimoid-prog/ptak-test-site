@@ -49,7 +49,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <GS.PrimaryButton to="/become-an-exhibitor">
+                <GS.PrimaryButton to="/exhibitor-registration">
                   {intl.formatMessage({ id: "buttons.becomeAnExhibitor" })}
                 </GS.PrimaryButton>
               </li>

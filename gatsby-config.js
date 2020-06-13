@@ -6,6 +6,10 @@ module.exports = {
     description: `Testowa strona dla Ptak Warsaw Expo`,
     author: `Mateusz Szkop`,
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:4000",
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

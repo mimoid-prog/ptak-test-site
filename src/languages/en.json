@@ -5,7 +5,11 @@
     "date": "June 17-19, 2020",
     "firstDay": "June 17 (Wednesday) 10:00 - 16:00",
     "secondDay": "June 18 (Thursday) 10:00 - 16:00",
-    "thirdDay": "June 19 (Friday) 10:00 - 15:00"
+    "thirdDay": "June 19 (Friday) 10:00 - 15:00",
+    "company": "Ptak Warsaw Expo",
+    "street": "al. Katowicka 62",
+    "postal": "05-830",
+    "city": "Nadarzyn"
   },
   "home": {
     "title": "Home",
@@ -78,13 +82,33 @@
     "secured": "Secured form",
     "error": "An error occured. Try again."
   },
-  "registration": {
+  "visitorRegistration": {
     "title": "Register",
     "desc": "and get a free ticket"
   },
-  "becomeAnExhibitor": {
+  "visitorConfirmation": {
+    "title": "Registration confirmation",
+    "greeting": "Thank you for the registration!",
+    "greetingText": "Welcome to the trade fair",
+    "info": "A confirmation has been sent to the email address provided with a unique QR code that authorizes you to enter the fair. You can also download it by clicking the button below.",
+    "downloadQR": "Download QR code",
+    "openingHours": "Opening hours:",
+    "openingHoursChange": "*opening hours may change",
+    "farewell": "See you at the fair!"
+  },
+  "exhibitorRegistration": {
     "title": "Become an Exhibitor",
     "desc": "Please fill out the form below and our dedicated team will contact you regarding the possible cooperation"
+  },
+  "exhibitorConfirmation": {
+    "title": "Registration confirmation",
+    "greeting": "Thank you for the registration!",
+    "info": "Please be advised that in order to determine the details of your participation in the fair, you will be contacted by our team.",
+    "info2": "A confirmation of registration was sent to the e-mail address provided.",
+    "downloadQR": "Download QR code",
+    "openingHours": "Opening hours:",
+    "openingHoursChange": "*opening hours may change",
+    "farewell": "See you at the fair!"
   },
   "footer": {
     "headingOne": "Trade fairs / Conferences / Events",
