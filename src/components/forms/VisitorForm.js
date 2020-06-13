@@ -26,8 +26,8 @@ const VisitorForm = () => {
         email: "",
         phone: "",
         nip: "",
-        consentOne: true,
-        consentTwo: true,
+        consentOne: false,
+        consentTwo: false,
       }}
       validationSchema={Yup.object({
         company: Yup.string()

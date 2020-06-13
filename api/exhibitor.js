@@ -8,7 +8,7 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connected to database"))
-  .catch(error => console.log(error))
+  .catch(error => res.status(400).json({ error: "Connecting database error" }))
 
 const exhibitorSchema = new mongoose.Schema({
   company: { type: String, maxlength: 40, required: true },
@@ -21,36 +21,6 @@ const exhibitorSchema = new mongoose.Schema({
 exhibitorSchema.plugin(uniqueValidator)
 
 const Exhibitor = mongoose.model("Exhibitor", exhibitorSchema)
-
-app.post("/api/visitor", (req, res) => {
-  const values = req.body.values
-
-  QRCode.toDataURL(values.email)
-    .then(newQR => {
-      const newVisitor = new Visitor({
-        company: values.company,
-        name: values.name,
-        email: values.email,
-        phone: values.phone,
-        nip: values.nip,
-        qr: newQR,
-      })
-
-      newVisitor
-        .save()
-        .then(() => {
-          res.json({ qr: newQR })
-        })
-        .catch(err => {
-          console.error(err)
-          res.status(400).json({ error: "Creating new visitor error" })
-        })
-    })
-    .catch(err => {
-      console.error(err)
-      res.status(400).json({ error: "Creating QR code error" })
-    })
-})
 
 module.exports = (req, res) => {
   const values = req.body.values
