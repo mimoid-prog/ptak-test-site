@@ -60,7 +60,6 @@ const VisitorForm = () => {
         axios
           .post("/api/visitor", { values })
           .then(res => {
-            setIsLoading(false)
             navigate("/visitor-registration/confirmation", {
               state: {
                 qr: res.data.qr,

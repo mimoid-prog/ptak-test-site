@@ -61,7 +61,6 @@ const ExhibitorForm = () => {
         axios
           .post("/api/exhibitor", { values })
           .then(res => {
-            setIsLoading(false)
             navigate("/exhibitor-registration/confirmation")
           })
           .catch(err => {
