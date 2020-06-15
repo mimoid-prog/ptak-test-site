@@ -46,3 +46,11 @@ export const SecondaryButton = styled(BasicButton)`
     background-color: ${({ theme }) => theme.colors.whiteDark};
   }
 `
+
+export const SecondaryTitle = styled.h2`
+  font-size: 1.8em;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    font-size: 2.2em;
+  }
+`

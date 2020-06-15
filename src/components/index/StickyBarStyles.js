@@ -8,6 +8,7 @@ export const StickyBar = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     position: sticky;
     top: 0;
+    z-index: 99;
   }
 `
 

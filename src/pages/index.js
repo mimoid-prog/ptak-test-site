@@ -4,6 +4,7 @@ import MainLayout from "layouts/MainLayout"
 import SEO from "utils/seo"
 import Header from "components/index/Header"
 import StickyBar from "components/index/StickyBar"
+import Partners from "components/index/Partners"
 import Footer from "components/footer/Footer"
 
 const IndexPage = () => {
@@ -14,9 +15,7 @@ const IndexPage = () => {
       <SEO title={intl.formatMessage({ id: "global.name" })} />
       <Header />
       <StickyBar />
-      <h1 style={{ textAlign: "center", fontSize: "60px", color: "#e6e6e6" }}>
-        PTAK WARSAW EXPO
-      </h1>
+      <Partners />
       <Footer />
     </MainLayout>
   )
