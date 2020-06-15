@@ -6,6 +6,7 @@ import Header from "components/index/Header"
 import StickyBar from "components/index/StickyBar"
 import Partners from "components/index/Partners"
 import Footer from "components/footer/Footer"
+import Introduction from "components/index/Introduction"
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Header />
       <StickyBar />
       <Partners />
+      <Introduction />
       <Footer />
     </MainLayout>
   )

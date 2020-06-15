@@ -94,7 +94,7 @@ export const Navigation = styled.nav`
   right: 0;
   top: 0;
   background: #1c1c1c;
-  z-index: 2;
+  z-index: 29;
   transform: ${({ isActive }) =>
     isActive ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.4s ease;

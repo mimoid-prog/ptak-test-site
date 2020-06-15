@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Partners = styled.div`
   text-align: center;
-  padding: 20px 0 30px;
+  padding: 20px 0 50px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: 40px 0 60px;

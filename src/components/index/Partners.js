@@ -51,7 +51,7 @@ const Partners = () => {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 40,
       },
       768: {
