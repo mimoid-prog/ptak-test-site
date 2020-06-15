@@ -1,7 +1,11 @@
 import styled from "styled-components"
 
 export const Introduction = styled.div`
-  padding-bottom: 140px;
+  margin-bottom: 40px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-bottom: 100px;
+  }
 `
 
 export const IntroductionInner = styled.div`
@@ -64,14 +68,14 @@ export const IntroductionInner = styled.div`
     & > div:first-child {
       width: 40%;
       margin-right: 40px;
-      grid-template-columns: 40px auto 40px;
+      grid-template-columns: 1fr 20px 1fr;
 
       div:first-child {
-        grid-row: 1 / 3;
+        grid-column: 1 / 2;
       }
 
       div:last-child {
-        grid-row: 2 / 4;
+        grid-column: 3 / 4;
       }
     }
 
@@ -93,15 +97,6 @@ export const IntroductionInner = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
     & > div:first-child {
       width: 50%;
-      grid-template-columns: 1fr 20px 1fr;
-
-      div:first-child {
-        grid-column: 1 / 2;
-      }
-
-      div:last-child {
-        grid-column: 3 / 4;
-      }
     }
 
     & > div:last-child {
