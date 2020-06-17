@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Ptak = styled.div`
-  padding-bottom: 140px;
+  padding-bottom: 120px;
   text-align: center;
 `
 

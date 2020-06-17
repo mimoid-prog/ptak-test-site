@@ -6,7 +6,9 @@ import Header from "components/index/Header"
 import StickyBar from "components/index/StickyBar"
 import Partners from "components/index/Partners"
 import Introduction from "components/index/Introduction"
-import Ptak from "components/index/Ptak"
+import ThematicZones from "components/index/ThematicZones"
+import Statistics from "components/index/Statistics"
+import Practical from "components/index/Practical"
 import Footer from "components/footer/Footer"
 
 const IndexPage = () => {
@@ -19,7 +21,9 @@ const IndexPage = () => {
       <StickyBar />
       <Partners />
       <Introduction />
-      <Ptak />
+      <ThematicZones />
+      <Statistics />
+      <Practical />
       <Footer />
     </MainLayout>
   )

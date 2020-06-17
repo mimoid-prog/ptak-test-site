@@ -1,7 +1,5 @@
 import styled from "styled-components"
 import { Container } from "styles/GlobalStyles"
-import UKFlag from "images/uk.svg"
-import PLFlag from "images/pl.svg"
 
 export const Navbar = styled.div`
   padding-top: 10px;
@@ -124,7 +122,12 @@ export const Navigation = styled.nav`
     font-size: 18px;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+  .flag {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 400px;
   }
 
@@ -169,21 +172,4 @@ export const NavigationContainer = styled(Container)`
 export const LanguageLink = styled.a`
   display: inline-block;
   margin-right: ${({ length }) => (length === 2 ? "0px" : "20px")};
-`
-
-export const EN = styled(UKFlag)`
-  width: 40px;
-  cursor: pointer;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    width: 30px;
-  }
-`
-export const PL = styled(PLFlag)`
-  width: 40px;
-  cursor: pointer;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    width: 30px;
-  }
 `

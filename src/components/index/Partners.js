@@ -1,6 +1,6 @@
 import React from "react"
 import * as S from "./PartnersStyles.js"
-import { Container, SecondaryTitle } from "styles/GlobalStyles"
+import { Container, TertiaryTitle } from "styles/GlobalStyles"
 import Swiper from "react-id-swiper"
 import "swiper/css/swiper.css"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,7 +9,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 const GS = {}
 GS.Container = Container
-GS.SecondaryTitle = SecondaryTitle
+GS.TertiaryTitle = TertiaryTitle
 
 const Partners = () => {
   const intl = useIntl()
@@ -72,12 +72,12 @@ const Partners = () => {
   return (
     <S.Partners>
       <GS.Container>
-        <GS.SecondaryTitle>
+        <GS.TertiaryTitle>
           {intl.formatMessage({ id: "home.partners" })}
-        </GS.SecondaryTitle>
+        </GS.TertiaryTitle>
         <Swiper {...params}>
-          {data.allFile.edges.map(image => (
-            <S.Slide>
+          {data.allFile.edges.map((image, i) => (
+            <S.Slide key={i}>
               <Img fluid={image.node.childImageSharp.fluid} alt="lol" />
             </S.Slide>
           ))}

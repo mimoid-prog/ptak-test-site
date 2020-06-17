@@ -2,20 +2,22 @@
   "global": {
     "name": "Warsaw Shop Expo",
     "desc": "Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych",
-    "date": "17-19 czerwca 2020",
-    "firstDay": "17 czerwca (środa) 10:00 - 16:00",
-    "secondDay": "18 czerwca (czwartek) 10:00 - 16:00",
-    "thirdDay": "19 czerwca (piątek) 10:00 - 15:00",
+    "date": "11-13 lipca 2020",
+    "firstDay": "11 lipca (sobota) 10:00 - 16:00",
+    "secondDay": "12 lipca (niedziela) 10:00 - 16:00",
+    "thirdDay": "13 lipca (poniedziałek) 10:00 - 15:00",
     "company": "Ptak Warsaw Expo",
     "street": "al. Katowicka 62",
     "postal": "05-830",
-    "city": "Nadarzyn"
+    "city": "Nadarzyn",
+    "helpline": "(+48) 518 739 124",
+    "email": "info@warsawexpo.eu"
   },
   "home": {
     "title": "Strona główna",
     "tillTheFair": "Do targów pozostało:",
     "timer": {
-      "date": "June 17, 2020",
+      "date": "July 11, 2020",
       "days": "d",
       "hours": "g",
       "minutes": "m",
@@ -24,36 +26,31 @@
     "soldStands": "sprzedanych stoisk",
     "registeredVisitors": "zarejestrowanych odwiedzających",
     "partners": "Nasi partnerzy",
-    "aboutTitle": "O Targach",
+    "aboutTitle": "O Warsaw Shop Expo",
     "aboutText": "Międzynarodowe Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych to nowe spojrzenie na targi o tematyce związanej z kompleksowym zaopatrzeniem sklepów. Warsaw Shop Expo to 3 dniowe święto branży retail, na której będzie można zobaczyć producentów i dystrybutorów: wyposażanie sklepów, maszyn czyszczących, urządzeń gastronomicznych, lad chłodniczych, pieców piekarniczych, urządzeń do przesyłu pieniędzy czy systemów zabezpieczenia towarów.",
-    "thematicZones": "Strefy tematyczne",
-    "thematicZoneTitles": [
-      "Strefa wyposażenia sklepów",
-      "Strefa marketingu i usług",
-      "Strefa higieny",
-      "Strefa Gastro",
-      "Strefa czyszczenia",
-      "Strefa vendingowa",
-      "Strefa magazynowa",
-      "Strefa mebli"
-    ],
-    "thematicZoneItems": [
-      ["boksy kasowe", "regały sklepowe", "wózki sklepowe", "oświetlenie"],
-      [
-        "programy IT",
-        "strefa e-commerce",
-        "przesył pieniędzy",
-        "dekoracje",
-        "programy lojalnościowe",
-        "BHP i P.Poż"
-      ],
-      ["armatura łazienkowa", "suszarki do rąk", "kosze na śmieci"],
-      ["urządzenia chłodnicze", "urządzenia piekarnicze"],
-      ["maszyny czyszczące", "produkty chemiczne"],
-      ["automaty vendingowe"],
-      ["regały magazynowe", "wózki widłowe", "drabiny", "zwyżki"],
-      ["meble biurowe", "meble sklepowe (wyspy)"]
-    ]
+    "thematicZones": {
+      "title": "Strefy tematyczne",
+      "zones": {
+        "0": "Strefa <span>wyposażenia sklepów</span>",
+        "1": "Strefa <span>marketingu i usług</span>",
+        "2": "Strefa <span>higieny</span>",
+        "3": "Strefa <span>Gastro</span>",
+        "4": "Strefa <span>czyszczenia</span>",
+        "5": "Strefa <span>vendingowa</span>",
+        "6": "Strefa <span>magazynowa</span>",
+        "7": "Strefa <span>mebli</span>"
+      }
+    },
+    "statistics": {
+      "title": "Poprzednia edycja w liczbach",
+      "stat1": "odwiedzających",
+      "stat2": "wystawców",
+      "stat3": "powierzchnii",
+      "stat4": "wykładów"
+    },
+    "practicalInformation": "Praktyczne <span>informacje</span>",
+    "openingHours": "Godziny otwarcia:",
+    "road": "Wyznacz trasę"
   },
   "forVisitors": {
     "title": "Dla odwiedzających"
@@ -62,7 +59,8 @@
     "title": "Dla wystawców"
   },
   "contact": {
-    "title": "Kontakt"
+    "title": "Kontakt",
+    "address": "Adres"
   },
   "form": {
     "company": "Firma",

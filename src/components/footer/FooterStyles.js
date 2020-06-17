@@ -44,8 +44,9 @@ export const Content = styled.div`
     }
   }
 
-  svg {
+  .icon {
     height: 50px;
+    width: 50px;
     margin-right: 14px;
   }
 
@@ -75,7 +76,7 @@ export const Content = styled.div`
       align-items: center;
     }
 
-    svg {
+    .icon {
       margin-right: 0;
       margin-bottom: 6px;
     }
@@ -107,7 +108,7 @@ export const Content = styled.div`
       margin-bottom: 0;
     }
 
-    svg {
+    .icon {
       margin-right: 14px;
       margin-bottom: 0;
     }
@@ -126,7 +127,7 @@ export const Content = styled.div`
       font-size: 1.1em;
     }
 
-    svg {
+    .icon {
       height: 60px;
     }
   }

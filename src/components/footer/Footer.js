@@ -10,10 +10,10 @@ import img4 from "images/footer-img-4.jpg"
 import img5 from "images/footer-img-5.jpg"
 import img6 from "images/footer-img-6.jpg"
 import logo from "images/ptak-logo-white.png"
-import Icon1 from "images/team.svg"
-import Icon2 from "images/graph.svg"
-import Icon3 from "images/plane.svg"
-import Icon4 from "images/lamp.svg"
+import icon1 from "images/team.svg"
+import icon2 from "images/graph.svg"
+import icon3 from "images/plane.svg"
+import icon4 from "images/lamp.svg"
 
 const GS = {}
 GS.Container = Container
@@ -30,19 +30,19 @@ const Footer = () => {
           <h3>{intl.formatMessage({ id: "footer.headingTwo" })}</h3>
           <ul>
             <li>
-              <Icon1 />
+              <img src={icon1} className="icon" />
               <FormattedHTMLMessage id="footer.listItemOne" />
             </li>
             <li>
-              <Icon2 />
+              <img src={icon2} className="icon" />
               <FormattedHTMLMessage id="footer.listItemTwo" />
             </li>
             <li>
-              <Icon3 />
+              <img src={icon3} className="icon" />
               <FormattedHTMLMessage id="footer.listItemThree" />
             </li>
             <li>
-              <Icon4 />
+              <img src={icon4} className="icon" />
               <FormattedHTMLMessage id="footer.listItemFour" />
             </li>
           </ul>

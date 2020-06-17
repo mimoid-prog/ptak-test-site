@@ -8,8 +8,13 @@ export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 80%;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    width: 70%;
+  }
 `
 
+/* Buttons --- */
 export const BasicButton = styled(Link)`
   border: none;
   border-radius: 3px;
@@ -38,6 +43,18 @@ export const PrimaryButton = styled(BasicButton)`
   }
 `
 
+export const OutlinedButton = styled(BasicButton)`
+  background-color: white;
+  color: ${({ theme }) => theme.colors.primaryDark};
+  border: 2px solid ${({ theme }) => theme.colors.primaryDark};
+  padding: 13px 25px;
+  &:hover {
+    color: white;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
+`
+
 export const SecondaryButton = styled(BasicButton)`
   background: white;
   color: black;
@@ -47,10 +64,19 @@ export const SecondaryButton = styled(BasicButton)`
   }
 `
 
+/* Headings --- */
 export const SecondaryTitle = styled.h2`
   font-size: 1.8em;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     font-size: 2.2em;
+  }
+`
+
+export const TertiaryTitle = styled.h3`
+  font-size: 1.4em;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    font-size: 1.6em;
   }
 `

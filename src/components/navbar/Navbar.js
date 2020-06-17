@@ -8,7 +8,10 @@ import {
 import { PrimaryButton } from "styles/GlobalStyles"
 import * as S from "./NavbarStyles"
 import ptakLogo from "images/ptak-white.png"
+import UKFlag from "images/uk.svg"
+import PLFlag from "images/pl.svg"
 
+console.log(UKFlag)
 const GS = {}
 GS.PrimaryButton = PrimaryButton
 
@@ -64,8 +67,12 @@ const Navbar = () => {
                             onClick={() => changeLocale(language)}
                             length={languages.length}
                           >
-                            {language === "pl" && <S.PL />}
-                            {language === "en" && <S.EN />}
+                            {language === "pl" && (
+                              <img src={PLFlag} className="flag" />
+                            )}
+                            {language === "en" && (
+                              <img src={UKFlag} className="flag" />
+                            )}
                           </S.LanguageLink>
                         )}
                       </React.Fragment>

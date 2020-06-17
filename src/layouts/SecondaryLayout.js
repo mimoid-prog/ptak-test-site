@@ -29,9 +29,7 @@ const SecondaryLayout = ({ children }) => {
           </S.HeaderInner>
         </GS.Container>
       </S.Header>
-      <S.Content>
-        <GS.Container>{children}</GS.Container>
-      </S.Content>
+      <S.Content>{children}</S.Content>
       <FooterBar />
     </MainLayout>
   )

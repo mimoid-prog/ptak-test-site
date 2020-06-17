@@ -19,9 +19,9 @@ const Ptak = () => {
             width="800"
             height="515"
             src="https://www.youtube.com/embed/-RmRpZN1mHA"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </S.Video>
       </GS.Container>

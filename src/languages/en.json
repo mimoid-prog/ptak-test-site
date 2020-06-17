@@ -2,20 +2,22 @@
   "global": {
     "name": "Warsaw Shop Expo",
     "desc": "Trade Fair of Equipment and Accessories for Commercial Facilities and Networks",
-    "date": "June 17-19, 2020",
-    "firstDay": "June 17 (Wednesday) 10:00 - 16:00",
-    "secondDay": "June 18 (Thursday) 10:00 - 16:00",
-    "thirdDay": "June 19 (Friday) 10:00 - 15:00",
+    "date": "July 11-13, 2020",
+    "firstDay": "July 11 (Saturday) 10:00 - 16:00",
+    "secondDay": "July 12 (Sunday) 10:00 - 16:00",
+    "thirdDay": "July 13 (Monday) 10:00 - 15:00",
     "company": "Ptak Warsaw Expo",
     "street": "al. Katowicka 62",
     "postal": "05-830",
-    "city": "Nadarzyn"
+    "city": "Nadarzyn",
+    "helpline": "(+48) 518 739 124",
+    "email": "info@warsawexpo.eu"
   },
   "home": {
     "title": "Home",
     "tillTheFair": "It remains to the fair:",
     "timer": {
-      "date": "June 17, 2020",
+      "date": "July 11, 2020",
       "days": "d",
       "hours": "h",
       "minutes": "m",
@@ -24,36 +26,31 @@
     "soldStands": "of sold stands",
     "registeredVisitors": "registered visitors",
     "partners": "Our partners",
-    "aboutTitle": "About the fair",
+    "aboutTitle": "About Warsaw Shop Expo",
     "aboutText": "The International Trade Fair of Equipment and Accessories for Commercial Facilities and Networks is a new look at trade fairs related to comprehensive store supply. The Warsaw Shop Expo is a 3-day holiday of the retail industry, where you will see producers and distributors: furnishing stores, cleaning machines, catering equipment, refrigerated counters, bakery ovens, money transfer devices and goods security systems.",
-    "thematicZones": "Thematic zones",
-    "thematicZoneTitles": [
-      "Store equipment zone",
-      "Marketing and services zone",
-      "Hygiene zone",
-      "Gastro zone",
-      "Cleaning zone",
-      "Vending zone",
-      "Warehouse zone",
-      "Furniture zone"
-    ],
-    "thematicZoneItems": [
-      ["checkout boxes", "shop shelves", "shopping carts", "lighting"],
-      [
-        "IT programs",
-        "e-commers zone",
-        "money transfer",
-        "decor",
-        "loyalty programs",
-        "OHS and fire protection"
-      ],
-      ["bathroom fittings", "hand dryers", "litter bins"],
-      ["refrigeration equipment", "bakery equipment"],
-      ["cleaning machines", "chemical products"],
-      ["vending machines"],
-      ["storage shelves", "forklifts", "ladder", "increases"],
-      ["office furniture", "shop furniture (islands)"]
-    ]
+    "thematicZones": {
+      "title": "Thematic zones",
+      "zones": {
+        "0": "Store equipment <span>zone</span>",
+        "1": "Marketing and services <span>zone</span>",
+        "2": "Hygiene <span>zone</span>",
+        "3": "Gastro <span>zone</span>",
+        "4": "Cleaning <span>zone</span>",
+        "5": "Vending <span>zone</span>",
+        "6": "Warehouse <span>zone</span>",
+        "7": "Furniture <span>zone</span>"
+      }
+    },
+    "statistics": {
+      "title": "Previous edition in numbers",
+      "stat1": "visitors",
+      "stat2": "exhibitors",
+      "stat3": "of surface",
+      "stat4": "lectures"
+    },
+    "practicalInformation": "Practical <span>information</span>",
+    "openingHours": "Opening hours:",
+    "road": "Location"
   },
   "forVisitors": {
     "title": "For visitors"
@@ -62,7 +59,8 @@
     "title": "For exhibitors"
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "address": "Address"
   },
   "form": {
     "company": "Company",
