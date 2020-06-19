@@ -34,6 +34,7 @@ const Practictal = () => {
               as="a"
               href="https://g.page/warsaw-expo?share"
               target="_blank"
+              rel="noreferrer"
             >
               {intl.formatMessage({ id: "home.road" })}
             </GS.SecondaryButton>
