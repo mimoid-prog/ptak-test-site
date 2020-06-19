@@ -7,10 +7,10 @@ import {
   OutlinedButton,
 } from "styles/GlobalStyles"
 import * as S from "./StatisticsStyles"
-import visitorImg from "images/visitor.svg"
-import exhibitorImg from "images/exhibitor.svg"
-import areaImg from "images/area.svg"
-import lectureImg from "images/study.svg"
+import visitors from "images/icons/visitor.svg"
+import exhibitors from "images/icons/exhibitor.svg"
+import area from "images/icons/area.svg"
+import conference from "images/icons/study.svg"
 
 const GS = {}
 GS.Container = Container
@@ -30,7 +30,10 @@ const Statistics = () => {
           </GS.TertiaryTitle>
           <div className="statistics-box">
             <S.Item>
-              <img src={visitorImg} />
+              <img
+                src={visitors}
+                alt={intl.formatMessage({ id: "alts.icons.visitors" })}
+              />
               <p>
                 <span>7000</span>
                 <span>
@@ -39,7 +42,10 @@ const Statistics = () => {
               </p>
             </S.Item>
             <S.Item>
-              <img src={exhibitorImg} />
+              <img
+                src={exhibitors}
+                alt={intl.formatMessage({ id: "alts.icons.exhibitors" })}
+              />
               <p>
                 <span>100</span>
                 <span>
@@ -48,7 +54,10 @@ const Statistics = () => {
               </p>
             </S.Item>
             <S.Item>
-              <img src={areaImg} />
+              <img
+                src={area}
+                alt={intl.formatMessage({ id: "alts.icons.area" })}
+              />
               <p>
                 <span>5000m2</span>
                 <span>
@@ -57,7 +66,10 @@ const Statistics = () => {
               </p>
             </S.Item>
             <S.Item>
-              <img src={lectureImg} />
+              <img
+                src={conference}
+                alt={intl.formatMessage({ id: "alts.icons.conference" })}
+              />
               <p>
                 <span>20</span>
                 <span>

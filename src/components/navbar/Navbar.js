@@ -8,8 +8,8 @@ import {
 import { PrimaryButton } from "styles/GlobalStyles"
 import * as S from "./NavbarStyles"
 import ptakLogo from "images/ptak-white.png"
-import UKFlag from "images/uk.svg"
-import PLFlag from "images/pl.svg"
+import UKFlag from "images/icons/uk.svg"
+import PLFlag from "images/icons/pl.svg"
 
 console.log(UKFlag)
 const GS = {}
@@ -68,10 +68,10 @@ const Navbar = () => {
                             length={languages.length}
                           >
                             {language === "pl" && (
-                              <img src={PLFlag} className="flag" />
+                              <img src={PLFlag} className="flag" alt="flag" />
                             )}
                             {language === "en" && (
-                              <img src={UKFlag} className="flag" />
+                              <img src={UKFlag} className="flag" alt="flag" />
                             )}
                           </S.LanguageLink>
                         )}

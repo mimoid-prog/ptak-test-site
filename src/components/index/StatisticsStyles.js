@@ -6,16 +6,16 @@ export const Statistics = styled.div`
     url(${headerBg});
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
 `
 
 export const StatisticsInner = styled.div`
   background: white;
-  padding: 30px 10px;
-  border: 2px solid black;
+  padding: 30px;
   transform: translateY(-30px);
   text-align: center;
+  box-shadow: 2px -5px 15px 0px rgba(0, 0, 0, 0.15);
 
   .statistics-box {
     display: grid;
@@ -45,7 +45,7 @@ export const StatisticsInner = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     width: 450px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 50px 30px;
 
     .buttons-box {
       flex-direction: row;

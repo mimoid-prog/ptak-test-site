@@ -78,7 +78,10 @@ const Partners = () => {
         <Swiper {...params}>
           {data.allFile.edges.map((image, i) => (
             <S.Slide key={i}>
-              <Img fluid={image.node.childImageSharp.fluid} alt="lol" />
+              <Img
+                fluid={image.node.childImageSharp.fluid}
+                alt={intl.formatMessage({ id: `alts.partners.${i}` })}
+              />
             </S.Slide>
           ))}
         </Swiper>

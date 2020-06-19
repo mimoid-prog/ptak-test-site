@@ -15,17 +15,19 @@ export const Zones = styled.div`
     grid-gap: 20px;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `
 
 export const Zone = styled.div`
   background: #ebebeb;
-  border-radius: 10px;
+  border-radius: 8px;
+  padding: 5px 10px;
   width: 100%;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   margin-bottom: 10px;
 
   div {
@@ -38,12 +40,7 @@ export const Zone = styled.div`
     display: block;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    border-radius: 80px;
-
-    div {
-      width: 80px;
-      height: 80px;
-    }
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-bottom: 0px;
   }
 `

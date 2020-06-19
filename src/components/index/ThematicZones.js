@@ -41,7 +41,10 @@ const ThematicZones = () => {
           {data.allFile.edges.map((image, i) => (
             <S.Zone key={i}>
               <div>
-                <Img fluid={image.node.childImageSharp.fluid} />
+                <Img
+                  fluid={image.node.childImageSharp.fluid}
+                  alt={`alts.thematicZones.${i}`}
+                />
               </div>
               <p>
                 <FormattedHTMLMessage id={`home.thematicZones.zones.${i}`} />

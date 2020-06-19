@@ -2,8 +2,8 @@ import React from "react"
 import * as S from "./IntroductionStyles"
 import { useIntl } from "gatsby-plugin-intl"
 import { Container, SecondaryTitle } from "styles/GlobalStyles"
-import img1 from "images/home-image-1.jpg"
-import img2 from "images/home-image-2.jpg"
+import img1 from "images/photos/home-image-1.jpg"
+import img2 from "images/photos/home-image-2.jpg"
 
 const GS = {}
 GS.Container = Container

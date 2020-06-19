@@ -124,5 +124,46 @@
     "registerBottom": "Get a free ticket",
     "becomeAnExhibitor": "Become an Exhibitor",
     "oneLineRegister": "Receive the invitation - now!"
+  },
+  "alts": {
+    "partners": {
+      "0": "Gospodarka mięsna logotype",
+      "1": "Mistrz branży logotype",
+      "2": "Przemysł spożywczy logotype",
+      "3": "Problemy jakości logotype",
+      "4": "Przegląd piekarski i cukierniczy logotype",
+      "5": "Przegląd zbożowo-młynarski logotype",
+      "6": "Przemysł Fermentacyjny i Owocowo-Warzywy logotype",
+      "7": "foodfakty logotype",
+      "8": "Bilans dodatni logotype",
+      "9": "Kwartalnik Food Lex logotype",
+      "10": "Spomosz logotype",
+      "11": "Upemi logotype"
+    },
+    "thematicZones": {
+      "0": "Ikonka wózka sklepowego",
+      "1": "Ikonka usług",
+      "2": "Ikonka sprzątaczki",
+      "3": "Ikonka budynków",
+      "4": "Ikonka maszyny sprzątającej",
+      "5": "Ikonka maszyny vendingowej",
+      "6": "Ikonka towarów",
+      "7": "Ikonka sklepu"
+    },
+    "icons": {
+      "pl": "Język polski",
+      "eng": "Język angielski",
+      "visitors": "Ikonka odwiedzających targi",
+      "exhibitors": "Ikonka wystawcy",
+      "area": "Ikonka powierzchnia wystawiennicza",
+      "conference": "Ikonka wykładów i konferencji",
+      "team": "Ikonka zespołu targowego",
+      "graph": "Ikonka wzrostu i kompetencji",
+      "plane": "Ikonka samolotu",
+      "bulb": "Ikonka żarówki"
+    },
+    "footer": {
+      "img": "Zdjęcie z targów"
+    }
   }
 }

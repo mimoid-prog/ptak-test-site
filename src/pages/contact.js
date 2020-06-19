@@ -146,7 +146,8 @@ const Contact = () => {
                 frameBorder="0"
                 allowFullScreen=""
                 aria-hidden="false"
-                tabindex="0"
+                tabIndex="0"
+                title="map"
               ></iframe>
             </div>
           </div>

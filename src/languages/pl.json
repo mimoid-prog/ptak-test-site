@@ -116,12 +116,53 @@
     "listItemThree": "Doskonała <span>lokalizacja</span>",
     "listItemFour": "Innowacyjny system <span>wystawienniczy</span>",
     "linkOne": "Polityka prywatności",
-    "linkTwo": "Regulamin"
+    "linkTwo": "Regulamin obiektu"
   },
   "buttons": {
     "register": "Zarejestruj się",
     "registerBottom": "Odbierz darmowy bilet",
     "becomeAnExhibitor": "Zostań wystawcą",
     "oneLineRegister": "Odbierz zaproszenie - teraz!"
+  },
+  "alts": {
+    "partners": {
+      "0": "Gospodarka mięsna logo",
+      "1": "Mistrz branży logo",
+      "2": "Przemysł spożywczy logo",
+      "3": "Problemy jakości logo",
+      "4": "Przegląd piekarski i cukierniczy logo",
+      "5": "Przegląd zbożowo-młynarski logo",
+      "6": "Przemysł Fermentacyjny i Owocowo-Warzywy logo",
+      "7": "foodfakty logo",
+      "8": "Bilans dodatni logo",
+      "9": "Kwartalnik Food Lex logo",
+      "10": "Spomosz logo",
+      "11": "Upemi logo"
+    },
+    "thematicZones": {
+      "0": "Ikonka wózka sklepowego",
+      "1": "Ikonka usług",
+      "2": "Ikonka sprzątaczki",
+      "3": "Ikonka budynków",
+      "4": "Ikonka maszyny sprzątającej",
+      "5": "Ikonka maszyny vendingowej",
+      "6": "Ikonka towarów",
+      "7": "Ikonka sklepu"
+    },
+    "icons": {
+      "pl": "Język polski",
+      "eng": "Język angielski",
+      "visitors": "Ikonka odwiedzających targi",
+      "exhibitors": "Ikonka wystawcy",
+      "area": "Ikonka powierzchnia wystawiennicza",
+      "conference": "Ikonka wykładów i konferencji",
+      "team": "Ikonka zespołu targowego",
+      "graph": "Ikonka wzrostu i kompetencji",
+      "plane": "Ikonka samolotu",
+      "bulb": "Ikonka żarówki"
+    },
+    "footer": {
+      "img": "Zdjęcie z targów"
+    }
   }
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import footerBg from "images/footer-bg.jpg"
+import footerBg from "images/footer/footer-bg.jpg"
 
 export const Footer = styled.footer``
 

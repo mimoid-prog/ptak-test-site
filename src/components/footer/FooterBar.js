@@ -40,10 +40,22 @@ const FooterBar = () => {
       <p>© 2020 Ptak Warsaw Expo</p>
       <ul>
         <li>
-          <a href="#">{intl.formatMessage({ id: "footer.linkOne" })}</a>
+          <a
+            href="https://warsawexpo.eu/polityka-prywatnosci/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {intl.formatMessage({ id: "footer.linkOne" })}
+          </a>
         </li>
         <li>
-          <a href="#">{intl.formatMessage({ id: "footer.linkTwo" })}</a>
+          <a
+            href="https://warsawexpo.eu/wp-content/uploads/2019/08/Regulamin-obiektu-2019-TKFS-PL.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {intl.formatMessage({ id: "footer.linkTwo" })}
+          </a>
         </li>
       </ul>
     </FooterBarWrapper>
