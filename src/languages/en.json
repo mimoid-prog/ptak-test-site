@@ -62,6 +62,16 @@
     "title": "Contact",
     "address": "Address"
   },
+  "exhibitorsCatalog": {
+    "title": "Exhibitors catalog"
+  },
+  "hostedBuyers": {
+    "title": "Hosted Buyers",
+    "link": "https://warsawexpo.eu/en/hosted-buyers/"
+  },
+  "hotels": {
+    "title": "Hotels"
+  },
   "form": {
     "company": "Company",
     "name": "Name",
@@ -141,14 +151,14 @@
       "11": "Upemi logotype"
     },
     "thematicZones": {
-      "0": "Ikonka wózka sklepowego",
-      "1": "Ikonka usług",
-      "2": "Ikonka sprzątaczki",
-      "3": "Ikonka budynków",
-      "4": "Ikonka maszyny sprzątającej",
-      "5": "Ikonka maszyny vendingowej",
-      "6": "Ikonka towarów",
-      "7": "Ikonka sklepu"
+      "0": "Icon of",
+      "1": "Icon of",
+      "2": "Icon of",
+      "3": "Icon of",
+      "4": "Icon of",
+      "5": "Icon of",
+      "6": "Icon of",
+      "7": "Icon of"
     },
     "icons": {
       "pl": "Język polski",
@@ -160,10 +170,11 @@
       "team": "Ikonka zespołu targowego",
       "graph": "Ikonka wzrostu i kompetencji",
       "plane": "Ikonka samolotu",
-      "bulb": "Ikonka żarówki"
+      "bulb": "Ikonka żarówki",
+      "arrow": "Icon of the bottom arrow"
     },
     "footer": {
-      "img": "Zdjęcie z targów"
+      "img": "Photo of the trade fair"
     }
   }
 }

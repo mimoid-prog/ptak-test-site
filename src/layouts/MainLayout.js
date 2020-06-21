@@ -47,6 +47,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  .menu-active {
+    overflow: hidden;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      overflow: auto;
+    }
+  }
 `
 
 const theme = {

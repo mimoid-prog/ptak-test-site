@@ -11,7 +11,6 @@ export const Navbar = styled.div`
 
 export const NavbarContent = styled.div`
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
 
@@ -26,7 +25,6 @@ export const OpenBtn = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   background: transparent;
   border: none;
   padding: 8px;
@@ -45,16 +43,13 @@ export const OpenBtn = styled.button`
 `
 
 export const CloseBtn = styled.button`
-  background: transparent;
-  border: none;
-  position: absolute;
-  right: 6px;
-  top: 24px;
   width: 32px;
   height: 32px;
-  padding: 8px;
+  background: transparent;
+  border: none;
   box-sizing: content-box;
   cursor: pointer;
+  padding: 0;
 
   & > div {
     position: relative;
@@ -88,6 +83,7 @@ export const CloseBtn = styled.button`
 
 export const Navigation = styled.nav`
   width: 100%;
+  height: 100%;
   position: fixed;
   right: 0;
   top: 0;
@@ -96,23 +92,64 @@ export const Navigation = styled.nav`
   transform: ${({ isActive }) =>
     isActive ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.4s ease;
-  text-align: center;
+  overflow-y: auto;
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 400px;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    transform: translateX(0);
+    background: transparent;
+    position: static;
+    width: auto;
+    overflow-y: initial;
+  }
+`
+
+export const NavigationContainer = styled(Container)`
+  position: relative;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: auto;
+    margin: auto;
+  }
+`
+
+export const Menu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 35px 0 50px;
 
   li {
     margin-bottom: 40px;
+    position: relative;
 
     &:last-child {
       margin: 0;
+    }
+
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arrow-btn {
+      background: none;
+      border: none;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .arrow {
+      width: 18px;
+      transform: rotate(90deg);
     }
   }
 
@@ -127,24 +164,34 @@ export const Navigation = styled.nav`
     cursor: pointer;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: 400px;
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    transform: translateX(0);
-    background: transparent;
-    position: static;
-    width: auto;
-
-    ul {
-      flex-direction: row;
-      min-height: auto;
-      align-items: center;
-    }
+    flex-direction: row;
+    min-height: auto;
+    align-items: center;
+    padding: 0;
 
     li {
       margin: 0 20px 0 0;
+
+      span {
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 0;
+      }
+
+      .arrow-btn {
+        padding: 0;
+        margin-left: 8px;
+        cursor: initial;
+      }
+
+      .arrow {
+        width: 10px;
+      }
+
+      &:hover ul {
+        display: block;
+      }
     }
 
     a {
@@ -160,12 +207,54 @@ export const Navigation = styled.nav`
   }
 `
 
-export const NavigationContainer = styled(Container)`
-  position: relative;
+export const Submenu = styled.ul`
+  max-height: ${({ showSubmenu }) => (showSubmenu ? "1000px" : "0")};
+  margin-top: ${({ showSubmenu }) => (showSubmenu ? "16px" : "0")};
+  transition: max-height 0.5s ease, margin-top 0.2s ease;
+  overflow: hidden;
+  list-style-type: none;
+  padding-left: 14px;
+
+  li {
+    margin: 0 0 16px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #1c1c1c;
+    }
+  }
+
+  a {
+    font-size: 16px;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-    width: auto;
-    margin: auto;
+    display: none;
+    max-height: none;
+    height: auto;
+    margin-top: 0;
+    padding: 16px 0 0;
+    position: absolute;
+    z-index: 99999;
+
+    li {
+      background: black;
+      margin: 0;
+      border-bottom: 1px solid #262626;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      display: block;
+      padding: 10px 16px;
+    }
   }
 `
 

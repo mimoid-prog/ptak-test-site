@@ -62,6 +62,16 @@
     "title": "Kontakt",
     "address": "Adres"
   },
+  "exhibitorsCatalog": {
+    "title": "Katalog wystawców"
+  },
+  "hostedBuyers": {
+    "title": "Hosted Buyers",
+    "link": "https://warsawexpo.eu/hosted-buyers/"
+  },
+  "hotels": {
+    "title": "Baza hotelowa"
+  },
   "form": {
     "company": "Firma",
     "name": "Imię i nazwisko",
@@ -159,7 +169,8 @@
       "team": "Ikonka zespołu targowego",
       "graph": "Ikonka wzrostu i kompetencji",
       "plane": "Ikonka samolotu",
-      "bulb": "Ikonka żarówki"
+      "bulb": "Ikonka żarówki",
+      "arrow": "Ikonka strzałki w dół"
     },
     "footer": {
       "img": "Zdjęcie z targów"
