@@ -1,6 +1,6 @@
 import React from "react"
 import SecondaryLayout from "layouts/SecondaryLayout"
-import { Container, TertiaryTitle, PrimaryButton } from "styles/globalStyles"
+import { Container, TertiaryTitle, PrimaryButton } from "styles/GlobalStyles"
 import img1 from "images/photos/home-image-1.jpg"
 import img2 from "images/photos/home-image-2.jpg"
 import styled from "styled-components"
