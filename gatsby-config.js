@@ -1,5 +1,9 @@
 const path = require("path")
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Testowa strona`,
@@ -11,6 +15,8 @@ module.exports = {
     url: "http://localhost:4000",
   },
   plugins: [
+    `gatsby-plugin-layout`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,15 +38,15 @@ module.exports = {
         styles: path.join(__dirname, "src/styles"),
         utils: path.join(__dirname, "src/utils"),
         fonts: path.join(__dirname, "src/fonts"),
+        i18n: path.join(__dirname, "src/i18n"),
       },
     },
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-source-mongodb`,
       options: {
-        path: `${__dirname}/src/languages`,
-        languages: [`pl`, `en`],
-        defaultLanguage: `pl`,
-        redirect: true,
+        connectionString: `mongodb+srv://Ptak:${process.env.PASSWORD}@cluster0-9w44v.mongodb.net`,
+        dbName: `test`,
+        collection: `companies`,
       },
     },
     {

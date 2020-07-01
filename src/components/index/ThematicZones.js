@@ -1,6 +1,6 @@
 import React from "react"
 import * as S from "./ThematicZonesStyles"
-import { useIntl, FormattedHTMLMessage } from "gatsby-plugin-intl"
+import { useTranslation, Trans } from "react-i18next"
 import { Container, SecondaryTitle } from "styles/GlobalStyles"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -10,7 +10,7 @@ GS.Container = Container
 GS.SecondaryTitle = SecondaryTitle
 
 const ThematicZones = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const data = useStaticQuery(graphql`
     {
@@ -34,9 +34,7 @@ const ThematicZones = () => {
   return (
     <S.ThematicZones>
       <GS.Container>
-        <GS.SecondaryTitle>
-          {intl.formatMessage({ id: "home.thematicZones.title" })}
-        </GS.SecondaryTitle>
+        <GS.SecondaryTitle>{t("home.thematicZones.title")}</GS.SecondaryTitle>
         <S.Zones>
           {data.allFile.edges.map((image, i) => (
             <S.Zone key={i}>
@@ -46,9 +44,7 @@ const ThematicZones = () => {
                   alt={`alts.thematicZones.${i}`}
                 />
               </div>
-              <p>
-                <FormattedHTMLMessage id={`home.thematicZones.zones.${i}`} />
-              </p>
+              <Trans>{`home.thematicZones.zones.${i}`}</Trans>
             </S.Zone>
           ))}
         </S.Zones>

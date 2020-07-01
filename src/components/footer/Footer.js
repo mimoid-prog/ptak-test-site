@@ -1,5 +1,4 @@
 import React from "react"
-import { useIntl, FormattedHTMLMessage } from "gatsby-plugin-intl"
 import * as S from "./FooterStyles"
 import { Container } from "styles/GlobalStyles"
 import FooterBar from "./FooterBar"
@@ -14,52 +13,37 @@ import team from "images/icons/team.svg"
 import graph from "images/icons/graph.svg"
 import plane from "images/icons/plane.svg"
 import bulb from "images/icons/lamp.svg"
+import { useTranslation, Trans } from "react-i18next"
 
 const GS = {}
 GS.Container = Container
 
 const Footer = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <S.Footer>
       <S.Content>
         <GS.Container>
           <img src={logo} alt="Ptak Warsaw Expo logo" />
-          <h2>{intl.formatMessage({ id: "footer.headingOne" })}</h2>
-          <h3>{intl.formatMessage({ id: "footer.headingTwo" })}</h3>
+          <h2>{t("footer.headingOne")}</h2>
+          <h3>{t("footer.headingTwo")}</h3>
           <ul>
             <li>
-              <img
-                src={team}
-                className="icon"
-                alt={intl.formatMessage({ id: "alts.icons.team" })}
-              />
-              <FormattedHTMLMessage id="footer.listItemOne" />
+              <img src={team} className="icon" alt={t("alts.icons.team")} />
+              <Trans>{"footer.listItemOne"}</Trans>
             </li>
             <li>
-              <img
-                src={graph}
-                className="icon"
-                alt={intl.formatMessage({ id: "alts.icons.graph" })}
-              />
-              <FormattedHTMLMessage id="footer.listItemTwo" />
+              <img src={graph} className="icon" alt={t("alts.icons.graph")} />
+              <Trans>{"footer.listItemTwo"}</Trans>
             </li>
             <li>
-              <img
-                src={plane}
-                className="icon"
-                alt={intl.formatMessage({ id: "alts.icons.plane" })}
-              />
-              <FormattedHTMLMessage id="footer.listItemThree" />
+              <img src={plane} className="icon" alt={t("alts.icons.plane")} />
+              <Trans>{"footer.listItemThree"}</Trans>
             </li>
             <li>
-              <img
-                src={bulb}
-                className="icon"
-                alt={intl.formatMessage({ id: "alts.icons.bulb" })}
-              />
-              <FormattedHTMLMessage id="footer.listItemFour" />
+              <img src={bulb} className="icon" alt={t("alts.icons.bulb")} />
+              <Trans>{"footer.listItemFour"}</Trans>
             </li>
           </ul>
         </GS.Container>

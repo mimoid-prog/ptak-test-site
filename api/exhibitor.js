@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-const QRCode = require("qrcode")
 const uniqueValidator = require("mongoose-unique-validator")
 
 mongoose

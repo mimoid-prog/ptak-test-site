@@ -189,7 +189,7 @@ export const Menu = styled.ul`
         width: 10px;
       }
 
-      &:hover ul {
+      &:hover > div {
         display: block;
       }
     }
@@ -207,13 +207,16 @@ export const Menu = styled.ul`
   }
 `
 
-export const Submenu = styled.ul`
+export const Submenu = styled.div`
   max-height: ${({ showSubmenu }) => (showSubmenu ? "1000px" : "0")};
   margin-top: ${({ showSubmenu }) => (showSubmenu ? "16px" : "0")};
   transition: max-height 0.5s ease, margin-top 0.2s ease;
   overflow: hidden;
-  list-style-type: none;
   padding-left: 14px;
+
+  ul {
+    list-style-type: none;
+  }
 
   li {
     margin: 0 0 16px;
@@ -221,14 +224,14 @@ export const Submenu = styled.ul`
     &:last-child {
       border-bottom: none;
     }
-
-    &:hover {
-      background: #1c1c1c;
-    }
   }
 
   a {
     font-size: 16px;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
@@ -240,10 +243,13 @@ export const Submenu = styled.ul`
     position: absolute;
     z-index: 99999;
 
-    li {
+    ul {
       background: black;
+      padding: 8px;
+    }
+
+    li {
       margin: 0;
-      border-bottom: 1px solid #262626;
 
       &:last-child {
         border-bottom: none;
@@ -253,7 +259,8 @@ export const Submenu = styled.ul`
     a {
       white-space: nowrap;
       display: block;
-      padding: 10px 16px;
+      padding: 8px 12px;
+      font-size: 14px;
     }
   }
 `

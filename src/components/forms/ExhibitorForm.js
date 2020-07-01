@@ -1,19 +1,19 @@
 import React, { useState } from "react"
-import { useIntl, navigate } from "gatsby-plugin-intl"
 import * as Yup from "yup"
 import * as S from "./FormStyles"
 import { Formik, Form } from "formik"
-import Input from "./elements/Input"
+import InputBox from "./elements/InputBox"
 import Consent from "./elements/Consent"
-import Loader from "components/Loader"
-import { PrimaryButton } from "styles/GlobalStyles"
+import FormError from "./elements/FormError"
 import axios from "axios"
-
-const GS = {}
-GS.PrimaryButton = PrimaryButton
+import SubmitBox from "./elements/SubmitBox"
+import { useTranslation } from "react-i18next"
+import localizedNavigate from "utils/localizedNavigate"
+import LocaleContext from "src/localeContext"
 
 const ExhibitorForm = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { locale } = React.useContext(LocaleContext)
 
   const [errorMessage, setErrorMessage] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -31,27 +31,21 @@ const ExhibitorForm = () => {
       }}
       validationSchema={Yup.object({
         company: Yup.string()
-          .max(40, intl.formatMessage({ id: "form.max" }))
-          .required(intl.formatMessage({ id: "form.required" })),
-        name: Yup.string()
-          .max(40, intl.formatMessage({ id: "form.max" }))
-          .required(intl.formatMessage({ id: "form.required" })),
+          .max(40, t("form.max"))
+          .required(t("form.required")),
+        name: Yup.string().max(40, t("form.max")).required(t("form.required")),
         email: Yup.string()
-          .email(intl.formatMessage({ id: "form.invalidEmail" }))
-          .max(40, intl.formatMessage({ id: "form.max" }))
-          .required(intl.formatMessage({ id: "form.required" })),
-        phone: Yup.string()
-          .max(12, intl.formatMessage({ id: "form.max" }))
-          .required(intl.formatMessage({ id: "form.required" })),
-        nip: Yup.string()
-          .max(12, intl.formatMessage({ id: "form.max" }))
-          .required(intl.formatMessage({ id: "form.required" })),
+          .email(t("form.invalidEmail"))
+          .max(40, t("form.max"))
+          .required(t("form.required")),
+        phone: Yup.string().max(12, t("form.max")).required(t("form.required")),
+        nip: Yup.string().max(12, t("form.max")).required(t("form.required")),
         consentOne: Yup.boolean()
-          .required(intl.formatMessage({ id: "form.required" }))
-          .oneOf([true], intl.formatMessage({ id: "form.required" })),
+          .required(t("form.required"))
+          .oneOf([true], t("form.required")),
         consentTwo: Yup.boolean()
-          .required(intl.formatMessage({ id: "form.required" }))
-          .oneOf([true], intl.formatMessage({ id: "form.required" })),
+          .required(t("form.required"))
+          .oneOf([true], t("form.required")),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setIsLoading(true)
@@ -60,61 +54,36 @@ const ExhibitorForm = () => {
 
         axios
           .post("/api/exhibitor", { values })
-          .then(res => {
-            navigate("/exhibitor-registration/confirmation")
+          .then(() => {
+            localizedNavigate("/exhibitor-registration/confirmation", locale)
           })
-          .catch(err => {
+          .catch(() => {
             setIsLoading(false)
-            setErrorMessage(intl.formatMessage({ id: "form.error" }))
+            setErrorMessage(t("form.error"))
           })
       }}
     >
       <Form>
         <S.FormInner>
-          <Input
-            label={intl.formatMessage({ id: "form.company" })}
-            name="company"
-            type="text"
-          />
-          <Input
-            label={intl.formatMessage({ id: "form.name" })}
-            name="name"
-            type="text"
-          />
-          <Input
-            label={intl.formatMessage({ id: "form.email" })}
-            name="email"
-            type="email"
-          />
-          <Input
-            label={intl.formatMessage({ id: "form.phone" })}
-            name="phone"
-            type="text"
-          />
-          <Input
-            label={intl.formatMessage({ id: "form.nip" })}
-            name="nip"
-            type="text"
-          />
+          <S.Inputs>
+            <InputBox label={t("form.company")} name="company" type="text" />
+            <InputBox label={t("form.name")} name="name" type="text" />
+            <InputBox label={t("form.email")} name="email" type="email" />
+            <InputBox label={t("form.phone")} name="phone" type="text" />
+            <InputBox label={t("form.nip")} name="nip" type="text" />
+          </S.Inputs>
           <Consent
-            consent={intl.formatMessage({ id: "form.consentOne" })}
-            consentText={intl.formatMessage({ id: "form.consentOneText" })}
+            consent={t("form.consentOne")}
+            consentText={t("form.consentOneText")}
             name="consentOne"
           />
           <Consent
-            consent={intl.formatMessage({ id: "form.consentTwo" })}
-            consentText={intl.formatMessage({ id: "form.consentTwoText" })}
+            consent={t("form.consentTwo")}
+            consentText={t("form.consentTwoText")}
             name="consentTwo"
           />
-          <S.SubmitBox>
-            <div>
-              <GS.PrimaryButton as="button" type="submit">
-                {intl.formatMessage({ id: "form.button" })}
-              </GS.PrimaryButton>
-            </div>
-            <div>{isLoading && <Loader />}</div>
-          </S.SubmitBox>
-          {errorMessage && <S.ErrorMessage>{errorMessage}</S.ErrorMessage>}
+          <SubmitBox isLoading={isLoading} text={t("form.button")} />
+          <FormError message={errorMessage} />
         </S.FormInner>
       </Form>
     </Formik>

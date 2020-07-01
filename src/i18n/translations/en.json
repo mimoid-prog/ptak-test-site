@@ -31,14 +31,14 @@
     "thematicZones": {
       "title": "Thematic zones",
       "zones": {
-        "0": "Store equipment <span>zone</span>",
-        "1": "Marketing and services <span>zone</span>",
-        "2": "Hygiene <span>zone</span>",
-        "3": "Gastro <span>zone</span>",
-        "4": "Cleaning <span>zone</span>",
-        "5": "Vending <span>zone</span>",
-        "6": "Warehouse <span>zone</span>",
-        "7": "Furniture <span>zone</span>"
+        "0": "Store equipment <br/>zone",
+        "1": "Marketing and services <br/>zone",
+        "2": "Hygiene <br/>zone",
+        "3": "Gastro <br/>zone",
+        "4": "Cleaning <br/>zone",
+        "5": "Vending <br/>zone",
+        "6": "Warehouse <br/>zone",
+        "7": "Furniture <br/>zone"
       }
     },
     "statistics": {
@@ -48,7 +48,7 @@
       "stat3": "of surface",
       "stat4": "lectures"
     },
-    "practicalInformation": "Practical <span>information</span>",
+    "practicalInformation": "Practical <br/>information",
     "openingHours": "Opening hours:",
     "road": "Location"
   },
@@ -63,7 +63,19 @@
     "address": "Address"
   },
   "exhibitorsCatalog": {
-    "title": "Exhibitors catalog"
+    "title": "Exhibitors catalog",
+    "company": "Company",
+    "email": "Email",
+    "website": "Website"
+  },
+  "exhibitorsCatalogRegistration": {
+    "title": "Exhibitors catalog - registration",
+    "desc": "Register to the exhibitors' catalog if you want the visitors let to know your company and services."
+  },
+  "exhibitorsCatalogConfirmation": {
+    "title": "Thank you for registering to the exhibitors' catalog",
+    "desc": "Your entry has been sent to the exhibition team. After acceptance, it will appear in exhibitors catalog.",
+    "btn": "See exhibitors' catalog"
   },
   "hostedBuyers": {
     "title": "Hosted Buyers",
@@ -78,8 +90,12 @@
     "email": "Email",
     "phone": "Phone",
     "nip": "TAX ID",
+    "website": "Website",
+    "descPL": "Company description in polish",
+    "descEN": "Company description in english",
     "required": "This field is required",
     "invalidEmail": "Invalid email address",
+    "invalidWebsite": "Website must be a valid URL (eg. https://www.google.com)",
     "max": "Maximum number of characters exceeded",
     "button": "Submit",
     "consentOne": "I agree to the processing by PWE.",
@@ -122,10 +138,10 @@
   "footer": {
     "headingOne": "Trade fairs / Conferences / Events",
     "headingTwo": "Trade fair capital",
-    "listItemOne": "Experienced <span>team</span>",
-    "listItemTwo": "Professionalism and <span>comprehensiveness</span>",
-    "listItemThree": "Perfect <span>location</span>",
-    "listItemFour": "Innovative exhibition <span>system</span>",
+    "listItemOne": "Experienced <br/>team",
+    "listItemTwo": "Professionalism and <br/>comprehensiveness",
+    "listItemThree": "Perfect <br/>location",
+    "listItemFour": "Innovative exhibition <br/>system",
     "linkOne": "Privacy policy",
     "linkTwo": "Regulations"
   },

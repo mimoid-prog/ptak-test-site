@@ -1,26 +1,26 @@
 import React from "react"
 import { Container, SecondaryButton } from "styles/GlobalStyles"
 import * as S from "./StickyBarStyles"
-import { useIntl } from "gatsby-plugin-intl"
+import { useTranslation } from "react-i18next"
 
 const GS = {}
 GS.Container = Container
 GS.SecondaryButton = SecondaryButton
 
 const StickyBar = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <S.StickyBar>
       <GS.Container>
         <S.StickyBarInner>
           <div>
-            <p>35% {intl.formatMessage({ id: "home.soldStands" })}</p>
-            <p>1714 {intl.formatMessage({ id: "home.registeredVisitors" })}</p>
+            <p>35% {t("home.soldStands")}</p>
+            <p>1714 {t("home.registeredVisitors")}</p>
           </div>
           <div>
             <GS.SecondaryButton to="/visitor-registration">
-              {intl.formatMessage({ id: "buttons.oneLineRegister" })}
+              {t("buttons.oneLineRegister")}
             </GS.SecondaryButton>
           </div>
         </S.StickyBarInner>

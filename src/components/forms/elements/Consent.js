@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import { useField } from "formik"
 import styled from "styled-components"
 import ErrorMessage from "./ErrorMessage"
+import { useTranslation } from "react-i18next"
 
 const S = {}
 S.Consent = styled.div`
@@ -34,7 +34,7 @@ S.ConsentText = styled.p`
 `
 
 const Consent = ({ consent, consentText, ...props }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [field, meta] = useField({ ...props, type: "checkbox" })
   const [showConsentText, setShowConsentText] = useState(false)
 
@@ -49,11 +49,7 @@ const Consent = ({ consent, consentText, ...props }) => {
             tabIndex={0}
             onClick={() => setShowConsentText(!showConsentText)}
           >
-            (
-            {intl.formatMessage({
-              id: showConsentText ? "form.showLess" : "form.showMore",
-            })}
-            )
+            {showConsentText ? t("form.showLess") : t("form.showMore")}
           </span>
         </p>
       </S.Consent>

@@ -1,9 +1,9 @@
 import React from "react"
 import SecondaryLayout from "layouts/SecondaryLayout"
-import { useIntl } from "gatsby-plugin-intl"
 import SEO from "utils/seo"
 import styled from "styled-components"
 import { Container } from "styles/GlobalStyles"
+import { useTranslation } from "react-i18next"
 
 const GS = {}
 GS.Container = Container
@@ -88,18 +88,14 @@ S.Address = styled.div`
 `
 
 const Contact = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <SecondaryLayout>
       <GS.Container>
-        <SEO
-          title={`${intl.formatMessage({
-            id: "contact.title",
-          })} - ${intl.formatMessage({ id: "global.name" })}`}
-        />
+        <SEO title={`${t("contact.title")} - ${t("global.name")}`} />
         <S.Contacts>
-          <h2>{intl.formatMessage({ id: "contact.title" })}</h2>
+          <h2>{t("contact.title")}</h2>
           <div>
             <S.SingleContact>
               <div>
@@ -130,15 +126,14 @@ const Contact = () => {
         <S.Address>
           <div>
             <div>
-              <h2>{intl.formatMessage({ id: "contact.address" })}</h2>
+              <h2>{t("contact.address")}</h2>
               <h4>Ptak Warsaw Expo</h4>
-              <p>{intl.formatMessage({ id: "global.street" })}</p>
+              <p>{t("global.street")}</p>
               <p>
-                {intl.formatMessage({ id: "global.postal" })},{" "}
-                {intl.formatMessage({ id: "global.city" })}
+                {t("global.postal")}, {t("global.city")}
               </p>
-              <p>{intl.formatMessage({ id: "global.helpline" })}</p>
-              <p>{intl.formatMessage({ id: "global.email" })}</p>
+              <p>{t("global.helpline")}</p>
+              <p>{t("global.email")}</p>
             </div>
             <div>
               <iframe

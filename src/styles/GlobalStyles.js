@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Link } from "gatsby-plugin-intl"
+import { LocalizedLink as Link } from "components/links/LocalizedLink"
 
 export const Container = styled.div`
   width: 85%;

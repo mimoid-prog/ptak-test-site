@@ -1,6 +1,4 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
-import MainLayout from "layouts/MainLayout"
 import SEO from "utils/seo"
 import Header from "components/index/Header"
 import StickyBar from "components/index/StickyBar"
@@ -10,13 +8,14 @@ import ThematicZones from "components/index/ThematicZones"
 import Statistics from "components/index/Statistics"
 import Practical from "components/index/Practical"
 import Footer from "components/footer/Footer"
+import { useTranslation } from "react-i18next"
 
 const IndexPage = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
-    <MainLayout>
-      <SEO title={intl.formatMessage({ id: "global.name" })} />
+    <div>
+      <SEO title={t("global.name")} />
       <Header />
       <StickyBar />
       <Partners />
@@ -25,7 +24,7 @@ const IndexPage = () => {
       <Statistics />
       <Practical />
       <Footer />
-    </MainLayout>
+    </div>
   )
 }
 

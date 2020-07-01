@@ -1,6 +1,6 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 
 export const FooterBarWrapper = styled.div`
   width: 100%;
@@ -33,7 +33,7 @@ export const FooterBarWrapper = styled.div`
 `
 
 const FooterBar = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <FooterBarWrapper>
@@ -45,7 +45,7 @@ const FooterBar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            {intl.formatMessage({ id: "footer.linkOne" })}
+            {t("footer.linkOne")}
           </a>
         </li>
         <li>
@@ -54,7 +54,7 @@ const FooterBar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            {intl.formatMessage({ id: "footer.linkTwo" })}
+            {t("footer.linkTwo")}
           </a>
         </li>
       </ul>

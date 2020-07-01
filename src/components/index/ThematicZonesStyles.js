@@ -36,7 +36,7 @@ export const Zone = styled.div`
     margin-right: 5px;
   }
 
-  span {
+  p {
     display: block;
   }
 

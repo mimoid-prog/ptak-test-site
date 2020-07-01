@@ -1,20 +1,19 @@
 import React from "react"
 import * as S from "./HeaderStyles"
 import { Container, PrimaryButton } from "styles/GlobalStyles"
-import { useIntl, Link } from "gatsby-plugin-intl"
 import Navbar from "components/navbar/Navbar"
 import Logo from "images/logo.png"
 import Countdown from "react-countdown"
+import { useTranslation } from "react-i18next"
+import { LocalizedLink as Link } from "components/links/LocalizedLink"
 
 const GS = {}
 GS.Container = Container
 GS.PrimaryButton = PrimaryButton
 
 const Header = () => {
-  const intl = useIntl()
-  const timerDateInMiliseconds = new Date(
-    intl.formatMessage({ id: "home.timer.date" })
-  ).getTime()
+  const { t } = useTranslation()
+  const timerDateInMiliseconds = new Date(t("home.timer.date")).getTime()
 
   const renderer = ({ days, hours, minutes, seconds }) => {
     if (days < 10) days = "0" + days
@@ -26,19 +25,19 @@ const Header = () => {
       <span className="timer">
         <span>
           {days}
-          {intl.formatMessage({ id: "home.timer.days" })}
+          {t("home.timer.days")}
         </span>
         <span>
           {hours}
-          {intl.formatMessage({ id: "home.timer.hours" })}
+          {t("home.timer.hours")}
         </span>
         <span>
           {minutes}
-          {intl.formatMessage({ id: "home.timer.minutes" })}
+          {t("home.timer.minutes")}
         </span>
         <span>
           {seconds}
-          {intl.formatMessage({ id: "home.timer.seconds" })}
+          {t("home.timer.seconds")}
         </span>
       </span>
     )
@@ -49,13 +48,13 @@ const Header = () => {
       <GS.Container>
         <Navbar />
         <S.Logo src={Logo} alt="Warsaw Shop Expo Logo" />
-        <h1>{intl.formatMessage({ id: "global.name" })}</h1>
-        <h2>{intl.formatMessage({ id: "global.date" })}</h2>
+        <h1>{t("global.name")}</h1>
+        <h2>{t("global.date")}</h2>
         <GS.PrimaryButton as={Link} to="/visitor-registration">
-          <span>{intl.formatMessage({ id: "buttons.register" })}</span>
-          <span>{intl.formatMessage({ id: "buttons.registerBottom" })}</span>
+          <span>{t("buttons.register")}</span>
+          <span>{t("buttons.registerBottom")}</span>
         </GS.PrimaryButton>
-        <h4>{intl.formatMessage({ id: "home.tillTheFair" })}</h4>
+        <h4>{t("home.tillTheFair")}</h4>
         <Countdown
           date={timerDateInMiliseconds}
           daysInHours={false}

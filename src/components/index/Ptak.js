@@ -1,14 +1,14 @@
 import React from "react"
 import * as S from "./PtakStyles"
-import { useIntl } from "gatsby-plugin-intl"
 import { Container, SecondaryTitle } from "styles/GlobalStyles"
+import { useTranslation } from "react-i18next"
 
 const GS = {}
 GS.Container = Container
 GS.SecondaryTitle = SecondaryTitle
 
 const Ptak = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <S.Ptak>

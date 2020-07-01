@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
 import { PrimaryButton } from "styles/GlobalStyles"
 import FormLayout from "layouts/FormLayout"
 import SEO from "utils/seo"
+import { useTranslation } from "react-i18next"
 
 const S = {}
 S.DownloadButton = styled(PrimaryButton)`
@@ -16,36 +16,29 @@ S.DownloadButton = styled(PrimaryButton)`
 `
 
 const ExhibitorConfirmation = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <FormLayout>
       <SEO
-        title={`${intl.formatMessage({
-          id: "exhibitorConfirmation.title",
-        })} - ${intl.formatMessage({ id: "global.name" })}`}
+        title={`${t("exhibitorConfirmation.title")} - ${t("global.name")}`}
       />
-      <h4>{intl.formatMessage({ id: "exhibitorConfirmation.greeting" })}</h4>
-      <p>{intl.formatMessage({ id: "exhibitorConfirmation.info" })}</p>
-      <p>{intl.formatMessage({ id: "exhibitorConfirmation.info2" })}</p>
-      <p>{intl.formatMessage({ id: "exhibitorConfirmation.openingHours" })}*</p>
+      <h4>{t("exhibitorConfirmation.greeting")}</h4>
+      <p>{t("exhibitorConfirmation.info")}</p>
+      <p>{t("exhibitorConfirmation.info2")}</p>
+      <p>{t("exhibitorConfirmation.openingHours")}*</p>
       <ul>
-        <li>{intl.formatMessage({ id: "global.firstDay" })}</li>
-        <li>{intl.formatMessage({ id: "global.secondDay" })}</li>
-        <li>{intl.formatMessage({ id: "global.thirdDay" })}</li>
+        <li>{t("global.firstDay")}</li>
+        <li>{t("global.secondDay")}</li>
+        <li>{t("global.thirdDay")}</li>
       </ul>
-      <p>
-        {intl.formatMessage({
-          id: "exhibitorConfirmation.openingHoursChange",
-        })}
-      </p>
-      <h4>{intl.formatMessage({ id: "exhibitorConfirmation.farewell" })}</h4>
+      <p>{t("exhibitorConfirmation.openingHoursChange")}</p>
+      <h4>{t("exhibitorConfirmation.farewell")}</h4>
       <ul style={{ listStyle: "none" }}>
-        <li>{intl.formatMessage({ id: "global.company" })}</li>
-        <li>{intl.formatMessage({ id: "global.street" })}</li>
+        <li>{t("global.company")}</li>
+        <li>{t("global.street")}</li>
         <li>
-          {intl.formatMessage({ id: "global.postal" })},{" "}
-          {intl.formatMessage({ id: "global.city" })}
+          {t("global.postal")}, {t("global.city")}
         </li>
       </ul>
     </FormLayout>

@@ -5,14 +5,14 @@ import Swiper from "react-id-swiper"
 import "swiper/css/swiper.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useTranslation } from "react-i18next"
 
 const GS = {}
 GS.Container = Container
 GS.TertiaryTitle = TertiaryTitle
 
 const Partners = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const data = useStaticQuery(graphql`
     {
@@ -72,15 +72,13 @@ const Partners = () => {
   return (
     <S.Partners>
       <GS.Container>
-        <GS.TertiaryTitle>
-          {intl.formatMessage({ id: "home.partners" })}
-        </GS.TertiaryTitle>
+        <GS.TertiaryTitle>{t("home.partners")}</GS.TertiaryTitle>
         <Swiper {...params}>
           {data.allFile.edges.map((image, i) => (
             <S.Slide key={i}>
               <Img
                 fluid={image.node.childImageSharp.fluid}
-                alt={intl.formatMessage({ id: `alts.partners.${i}` })}
+                alt={t(`alts.partners.${i}`)}
               />
             </S.Slide>
           ))}

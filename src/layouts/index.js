@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Normalize } from "styled-normalize"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import colors from "styles/colors"
 import breakpoints from "styles/breakpoints"
+import withI18next from "../i18n/withI18next"
+import { useTranslation } from "react-i18next"
 
 import poppinsRegularWOFF2 from "fonts/Poppins-Regular.woff2"
 import poppinsRegularWOFF from "fonts/Poppins-Regular.woff"
@@ -62,7 +64,14 @@ const theme = {
   breakpoints,
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location, pageContext: { locale } }) => {
+  const { i18n } = useTranslation()
+
+  useEffect(() => {
+    console.log("LAYOUT USE EFFECT")
+    i18n.changeLanguage(locale)
+  }, [location, i18n, locale])
+
   return (
     <ThemeProvider theme={theme}>
       <Normalize />
@@ -76,4 +85,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default withI18next()(Layout)

@@ -1,7 +1,11 @@
 import styled from "styled-components"
 import headerBg from "images/header-bg.jpg"
 
-export const SecondaryLayout = styled.div``
+export const SecondaryLayout = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
 
 export const Header = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -42,7 +46,12 @@ export const HeaderInner = styled.div`
 `
 
 export const Content = styled.div`
-  padding: 10px 0 40px;
+  padding: 20px 0 40px;
+  flex: 1 0 auto;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 40px 0 60px;
+  }
 `
 
 export const Logo = styled.img`

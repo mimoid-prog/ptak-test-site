@@ -1,22 +1,24 @@
 import React, { useState } from "react"
-import {
-  useIntl,
-  Link,
-  IntlContextConsumer,
-  changeLocale,
-} from "gatsby-plugin-intl"
 import { PrimaryButton } from "styles/GlobalStyles"
 import * as S from "./NavbarStyles"
 import ptakLogo from "images/ptak-white.png"
 import UKFlag from "images/icons/uk.svg"
 import PLFlag from "images/icons/pl.svg"
 import arrow from "images/icons/arrow.svg"
+import { useTranslation } from "react-i18next"
+import { LocalizedLink as Link } from "components/links/LocalizedLink"
+import LanguageLink from "components/links/LanguageLink"
+import LocaleContext from "src/localeContext"
+const locales = require("i18n/locales")
 
 const GS = {}
 GS.PrimaryButton = PrimaryButton
 
 const Navbar = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+
+  const { locale } = React.useContext(LocaleContext)
+
   const [isActive, setIsActive] = useState(false)
   const [showSubmenu, setShowSubmenu] = useState({
     forVisitors: false,
@@ -58,120 +60,106 @@ const Navbar = () => {
                 </S.CloseBtn>
               </li>
               <li>
-                <Link to="/">{intl.formatMessage({ id: "home.title" })}</Link>
+                <Link to="/">{t("home.title")}</Link>
               </li>
               <li>
                 <span>
-                  <Link to="/for-visitors">
-                    {intl.formatMessage({ id: "forVisitors.title" })}
-                  </Link>
-                  <button className="arrow-btn">
-                    <img
-                      src={arrow}
-                      alt="arrow"
-                      className="arrow"
-                      onClick={() =>
-                        setShowSubmenu({
-                          forVisitors: !showSubmenu.forVisitors,
-                          forExhibitors: showSubmenu.forExhibitors,
-                        })
-                      }
-                    />
+                  <Link to="/for-visitors">{t("forVisitors.title")}</Link>
+                  <button
+                    className="arrow-btn"
+                    onClick={() =>
+                      setShowSubmenu({
+                        forVisitors: !showSubmenu.forVisitors,
+                        forExhibitors: showSubmenu.forExhibitors,
+                      })
+                    }
+                  >
+                    <img src={arrow} alt="arrow" className="arrow" />
                   </button>
                 </span>
                 <S.Submenu showSubmenu={showSubmenu.forVisitors}>
-                  <li>
-                    <Link to="/visitor-registration">
-                      {intl.formatMessage({ id: "visitorRegistration.title" })}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/exhibitors-catalog">
-                      {intl.formatMessage({ id: "exhibitorsCatalog.title" })}
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href={intl.formatMessage({ id: "hostedBuyers.link" })}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {intl.formatMessage({ id: "hostedBuyers.title" })}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://warsawexpo.eu/baza-hotelowa/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {intl.formatMessage({ id: "hotels.title" })}
-                    </a>
-                  </li>
+                  <ul>
+                    <li>
+                      <Link to="/visitor-registration">
+                        {t("visitorRegistration.title")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/exhibitors-catalog">
+                        {t("exhibitorsCatalog.title")}
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        href={t("hostedBuyers.link")}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t("hostedBuyers.title")}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://warsawexpo.eu/baza-hotelowa/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t("hotels.title")}
+                      </a>
+                    </li>
+                  </ul>
                 </S.Submenu>
               </li>
               <li>
                 <span>
                   <Link to="/for-exhibitors" className="with-arrow">
-                    {intl.formatMessage({ id: "forExhibitors.title" })}
+                    {t("forExhibitors.title")}
                   </Link>
-                  <button className="arrow-btn">
-                    <img
-                      src={arrow}
-                      alt="arrow"
-                      className="arrow"
-                      onClick={() =>
-                        setShowSubmenu({
-                          forVisitors: showSubmenu.forVisitors,
-                          forExhibitors: !showSubmenu.forExhibitors,
-                        })
-                      }
-                    />
+                  <button
+                    className="arrow-btn"
+                    onClick={() =>
+                      setShowSubmenu({
+                        forVisitors: showSubmenu.forVisitors,
+                        forExhibitors: !showSubmenu.forExhibitors,
+                      })
+                    }
+                  >
+                    <img src={arrow} alt="arrow" className="arrow" />
                   </button>
                 </span>
                 <S.Submenu showSubmenu={showSubmenu.forExhibitors}>
-                  <li>
-                    <Link to="/exhibitor-registration">
-                      {intl.formatMessage({
-                        id: "exhibitorRegistration.title",
-                      })}
-                    </Link>
-                  </li>
+                  <ul>
+                    <li>
+                      <Link to="/exhibitor-registration">
+                        {t("exhibitorRegistration.title")}
+                      </Link>
+                    </li>
+                  </ul>
                 </S.Submenu>
               </li>
               <li>
-                <Link to="/contact">
-                  {intl.formatMessage({ id: "contact.title" })}
-                </Link>
+                <Link to="/contact">{t("contact.title")}</Link>
               </li>
               <li>
                 <GS.PrimaryButton to="/exhibitor-registration">
-                  {intl.formatMessage({ id: "buttons.becomeAnExhibitor" })}
+                  {t("buttons.becomeAnExhibitor")}
                 </GS.PrimaryButton>
               </li>
               <li>
-                <IntlContextConsumer>
-                  {({ languages, language: currentLocale }) =>
-                    languages.map((language, i) => (
-                      <React.Fragment key={i}>
-                        {language !== currentLocale && (
-                          <S.LanguageLink
-                            key={language}
-                            onClick={() => changeLocale(language)}
-                            length={languages.length}
-                          >
-                            {language === "pl" && (
-                              <img src={PLFlag} className="flag" alt="flag" />
-                            )}
-                            {language === "en" && (
-                              <img src={UKFlag} className="flag" alt="flag" />
-                            )}
-                          </S.LanguageLink>
+                {Object.keys(locales).map((lang, i) => (
+                  <React.Fragment key={i}>
+                    {lang !== locale && (
+                      <LanguageLink lang={lang} style={{ marginRight: "12px" }}>
+                        {locales[lang].path === "pl" && (
+                          <img src={PLFlag} className="flag" alt="flag" />
                         )}
-                      </React.Fragment>
-                    ))
-                  }
-                </IntlContextConsumer>
+                        {locales[lang].path === "en" && (
+                          <img src={UKFlag} className="flag" alt="flag" />
+                        )}
+                      </LanguageLink>
+                    )}
+                  </React.Fragment>
+                ))}
               </li>
             </S.Menu>
           </S.NavigationContainer>

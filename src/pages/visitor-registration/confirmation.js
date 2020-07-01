@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
 import { PrimaryButton } from "styles/GlobalStyles"
 import FormLayout from "layouts/FormLayout"
 import SEO from "utils/seo"
+import { useTranslation } from "react-i18next"
 
 const S = {}
 S.DownloadButton = styled(PrimaryButton)`
@@ -16,44 +16,34 @@ S.DownloadButton = styled(PrimaryButton)`
 `
 
 const VisitorConfirmation = ({ location }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <FormLayout>
-      <SEO
-        title={`${intl.formatMessage({
-          id: "visitorConfirmation.title",
-        })} - ${intl.formatMessage({ id: "global.name" })}`}
-      />
-      <h4>{intl.formatMessage({ id: "visitorConfirmation.greeting" })}</h4>
+      <SEO title={`${t("visitorConfirmation.title")} - ${t("global.name")}`} />
+      <h4>{t("visitorConfirmation.greeting")}</h4>
       <p>
-        {intl.formatMessage({ id: "visitorConfirmation.greetingText" })}{" "}
-        {intl.formatMessage({ id: "global.name" })}.
+        {t("visitorConfirmation.greetingText")} {t("global.name")}.
       </p>
-      <p>{intl.formatMessage({ id: "visitorConfirmation.info" })}</p>
+      <p>{t("visitorConfirmation.info")}</p>
       {location.state && (
         <S.DownloadButton as="a" href={location.state.qr} download="qrcode">
-          {intl.formatMessage({ id: "visitorConfirmation.downloadQR" })}
+          {t("visitorConfirmation.downloadQR")}
         </S.DownloadButton>
       )}
-      <p>{intl.formatMessage({ id: "visitorConfirmation.openingHours" })}*</p>
+      <p>{t("visitorConfirmation.openingHours")}*</p>
       <ul>
-        <li>{intl.formatMessage({ id: "global.firstDay" })}</li>
-        <li>{intl.formatMessage({ id: "global.secondDay" })}</li>
-        <li>{intl.formatMessage({ id: "global.thirdDay" })}</li>
+        <li>{t("global.firstDay")}</li>
+        <li>{t("global.secondDay")}</li>
+        <li>{t("global.thirdDay")}</li>
       </ul>
-      <p>
-        {intl.formatMessage({
-          id: "visitorConfirmation.openingHoursChange",
-        })}
-      </p>
-      <h4>{intl.formatMessage({ id: "visitorConfirmation.farewell" })}</h4>
+      <p>{t("visitorConfirmation.openingHoursChange")}</p>
+      <h4>{t("visitorConfirmation.farewell")}</h4>
       <ul style={{ listStyle: "none" }}>
-        <li>{intl.formatMessage({ id: "global.company" })}</li>
-        <li>{intl.formatMessage({ id: "global.street" })}</li>
+        <li>{t("global.company")}</li>
+        <li>{t("global.street")}</li>
         <li>
-          {intl.formatMessage({ id: "global.postal" })},{" "}
-          {intl.formatMessage({ id: "global.city" })}
+          {t("global.postal")}, {t("global.city")}
         </li>
       </ul>
     </FormLayout>

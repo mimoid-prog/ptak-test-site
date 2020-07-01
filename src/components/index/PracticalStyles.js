@@ -35,10 +35,6 @@ export const PracticalInner = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    h2 span {
-      display: block;
-    }
-
     h4 {
       margin-top: 0;
     }
@@ -71,8 +67,8 @@ export const PracticalInner = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     grid-template-columns: 2fr 1fr 1fr;
 
-    h2 span {
-      display: initial;
+    h2 br {
+      display: none;
     }
   }
 `

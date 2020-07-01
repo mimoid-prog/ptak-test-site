@@ -1,22 +1,20 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useTranslation } from "react-i18next"
 
 import FormLayout from "layouts/FormLayout"
 import SEO from "utils/seo"
 import ExhibitorForm from "components/forms/ExhibitorForm"
 
 const ExhibitorRegistration = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <FormLayout>
       <SEO
-        title={`${intl.formatMessage({
-          id: "exhibitorRegistration.title",
-        })} - ${intl.formatMessage({ id: "global.name" })}`}
+        title={`${t("exhibitorRegistration.title")} - ${t("global.name")}`}
       />
-      <h2>{intl.formatMessage({ id: "exhibitorRegistration.title" })}</h2>
-      <p>{intl.formatMessage({ id: "exhibitorRegistration.desc" })}</p>
+      <h2>{t("exhibitorRegistration.title")}</h2>
+      <p>{t("exhibitorRegistration.desc")}</p>
       <ExhibitorForm />
     </FormLayout>
   )

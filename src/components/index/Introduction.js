@@ -1,6 +1,6 @@
 import React from "react"
 import * as S from "./IntroductionStyles"
-import { useIntl } from "gatsby-plugin-intl"
+import { useTranslation } from "react-i18next"
 import { Container, SecondaryTitle } from "styles/GlobalStyles"
 import img1 from "images/photos/home-image-1.jpg"
 import img2 from "images/photos/home-image-2.jpg"
@@ -10,7 +10,7 @@ GS.Container = Container
 GS.SecondaryTitle = SecondaryTitle
 
 const Introduction = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <S.Introduction>
@@ -25,10 +25,8 @@ const Introduction = () => {
             </div>
           </div>
           <div>
-            <GS.SecondaryTitle>
-              {intl.formatMessage({ id: "home.aboutTitle" })}
-            </GS.SecondaryTitle>
-            <p>{intl.formatMessage({ id: "home.aboutText" })}</p>
+            <GS.SecondaryTitle>{t("home.aboutTitle")}</GS.SecondaryTitle>
+            <p>{t("home.aboutText")}</p>
           </div>
         </S.IntroductionInner>
       </GS.Container>

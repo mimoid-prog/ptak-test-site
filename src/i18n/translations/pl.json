@@ -31,14 +31,14 @@
     "thematicZones": {
       "title": "Strefy tematyczne",
       "zones": {
-        "0": "Strefa <span>wyposażenia sklepów</span>",
-        "1": "Strefa <span>marketingu i usług</span>",
-        "2": "Strefa <span>higieny</span>",
-        "3": "Strefa <span>Gastro</span>",
-        "4": "Strefa <span>czyszczenia</span>",
-        "5": "Strefa <span>vendingowa</span>",
-        "6": "Strefa <span>magazynowa</span>",
-        "7": "Strefa <span>mebli</span>"
+        "0": "Strefa <br/>wyposażenia sklepów",
+        "1": "Strefa <br/>marketingu i usług",
+        "2": "Strefa <br/>higieny",
+        "3": "Strefa <br/>Gastro",
+        "4": "Strefa <br/>czyszczenia",
+        "5": "Strefa <br/>vendingowa",
+        "6": "Strefa <br/>magazynowa",
+        "7": "Strefa <br/>mebli"
       }
     },
     "statistics": {
@@ -48,7 +48,7 @@
       "stat3": "powierzchnii",
       "stat4": "wykładów"
     },
-    "practicalInformation": "Praktyczne <span>informacje</span>",
+    "practicalInformation": "Praktyczne <br/>informacje",
     "openingHours": "Godziny otwarcia:",
     "road": "Wyznacz trasę"
   },
@@ -63,7 +63,19 @@
     "address": "Adres"
   },
   "exhibitorsCatalog": {
-    "title": "Katalog wystawców"
+    "title": "Katalog wystawców",
+    "company": "Firma",
+    "email": "Email",
+    "website": "Strona internetowa"
+  },
+  "exhibitorsCatalogRegistration": {
+    "title": "Katalog wystawców - rejestracja",
+    "desc": "Zapisz się do katalogu wystawców, jeśli chcesz aby odwiedzający targi mogli poznać twoją firmę i usługi."
+  },
+  "exhibitorsCatalogConfirmation": {
+    "title": "Dziękujemy za wpis do katalogu wystawców",
+    "desc": "Twój wpis został wysłany do zespołu targowego. Po akceptacji pojawi się w katalogu wystawców.",
+    "btn": "Zobacz katalog wystawców"
   },
   "hostedBuyers": {
     "title": "Hosted Buyers",
@@ -78,8 +90,12 @@
     "email": "Adres email",
     "phone": "Numer telefonu",
     "nip": "NIP",
+    "website": "Strona internetowa",
+    "descPL": "Opis firmy po polsku",
+    "descEN": "Opis firmy po angielsku",
     "required": "To pole jest wymagane",
     "invalidEmail": "Niepoprawny adres email",
+    "invalidWebsite": "Adres strony musi być pełny (np. https://www.google.pl)",
     "max": "Przekroczono maksymalną liczbę znaków",
     "button": "Wyślij",
     "consentOne": "Wyrażam zgodę na przetwarzanie przez PWE.",
@@ -121,10 +137,10 @@
   "footer": {
     "headingOne": "Targi / Konferencje / Eventy",
     "headingTwo": "Stolica targów",
-    "listItemOne": "Doświadczony <span>zespół</span>",
-    "listItemTwo": "Profesjonalizm i <span>kompleksowość</span>",
-    "listItemThree": "Doskonała <span>lokalizacja</span>",
-    "listItemFour": "Innowacyjny system <span>wystawienniczy</span>",
+    "listItemOne": "Doświadczony <br/>zespół",
+    "listItemTwo": "Profesjonalizm i <br/>kompleksowość",
+    "listItemThree": "Doskonała <br/>lokalizacja",
+    "listItemFour": "Innowacyjny system <br/>wystawienniczy",
     "linkOne": "Polityka prywatności",
     "linkTwo": "Regulamin obiektu"
   },
