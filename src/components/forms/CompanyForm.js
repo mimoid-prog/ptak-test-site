@@ -67,7 +67,10 @@ const CompanyForm = () => {
         axios
           .post("/api/company", { values })
           .then(() => {
-            localizedNavigate("/exhibitor-registration/confirmation", locale)
+            localizedNavigate(
+              "/exhibitors-catalog-registration/confirmation",
+              locale
+            )
           })
           .catch(() => {
             setIsLoading(false)
