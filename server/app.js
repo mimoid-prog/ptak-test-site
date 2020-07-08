@@ -29,7 +29,6 @@ app.post("/api/visitor", (req, res) => {
         email: values.email,
         phone: values.phone,
         nip: values.nip,
-        date: new Date().toISOString(),
         qr: newQR,
       })
 
@@ -58,7 +57,6 @@ app.post("/api/exhibitor", (req, res) => {
     email: values.email,
     phone: values.phone,
     nip: values.nip,
-    date: new Date().toISOString(),
   })
 
   newExhibitor
@@ -85,7 +83,6 @@ app.post("/api/company", (req, res) => {
     descPL: values.descPL,
     descEN: values.descEN,
     accepted: false,
-    date: new Date().toISOString(),
   })
 
   newCompany
