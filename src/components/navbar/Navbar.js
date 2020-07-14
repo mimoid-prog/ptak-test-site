@@ -10,6 +10,7 @@ import { LocalizedLink as Link } from "components/links/LocalizedLink"
 import LanguageLink from "components/links/LanguageLink"
 import LocaleContext from "src/localeContext"
 const locales = require("i18n/locales")
+const pages = require("i18n/pages")
 
 const GS = {}
 GS.PrimaryButton = PrimaryButton
@@ -17,7 +18,9 @@ GS.PrimaryButton = PrimaryButton
 const Navbar = () => {
   const { t } = useTranslation()
 
-  const { locale } = React.useContext(LocaleContext)
+  const { locale, pageSlug } = React.useContext(LocaleContext)
+
+  const pageLanguages = pages[pageSlug]
 
   const [isActive, setIsActive] = useState(false)
   const [showSubmenu, setShowSubmenu] = useState({
@@ -146,14 +149,14 @@ const Navbar = () => {
                 </GS.PrimaryButton>
               </li>
               <li>
-                {Object.keys(locales).map((lang, i) => (
+                {Object.keys(pageLanguages).map((lang, i) => (
                   <React.Fragment key={i}>
-                    {lang !== locale && (
+                    {lang !== locale && pages[pageSlug][lang].active === true && (
                       <LanguageLink lang={lang} style={{ marginRight: "12px" }}>
-                        {locales[lang].path === "pl" && (
+                        {lang === "pl" && (
                           <img src={PLFlag} className="flag" alt="flag" />
                         )}
-                        {locales[lang].path === "en" && (
+                        {lang === "en" && (
                           <img src={UKFlag} className="flag" alt="flag" />
                         )}
                       </LanguageLink>

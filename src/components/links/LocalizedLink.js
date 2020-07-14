@@ -5,8 +5,7 @@ import pages from "i18n/pages"
 
 export const LocalizedLink = ({ to, ...props }) => {
   const { locale } = React.useContext(LocaleContext)
-  console.log("to: ", to)
-  const path = pages[to][locale]
+  const path = pages[to][locale].slug
 
-  return <Link {...props} to={path} />
+  return pages[to][locale].active ? <Link {...props} to={path} /> : null
 }

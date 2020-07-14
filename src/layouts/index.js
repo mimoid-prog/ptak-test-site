@@ -68,7 +68,6 @@ const Layout = ({ children, location, pageContext: { locale } }) => {
   const { i18n } = useTranslation()
 
   useEffect(() => {
-    console.log("LAYOUT USE EFFECT")
     i18n.changeLanguage(locale)
   }, [location, i18n, locale])
 

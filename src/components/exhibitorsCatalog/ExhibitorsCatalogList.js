@@ -32,6 +32,8 @@ const ExhibitorsCatalogList = () => {
     edge => edge.node.accepted
   )
 
+  newData.sort((a, b) => a.node.company.localeCompare(b.node.company))
+
   const [expandedRow, setExpandedRow] = useState("")
 
   const changeExpandedRow = (id, tableRef, rowRef) => {

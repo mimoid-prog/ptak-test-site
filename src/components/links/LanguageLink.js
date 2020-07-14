@@ -5,7 +5,7 @@ import pages from "i18n/pages"
 
 const LanguageLink = ({ lang, ...props }) => {
   const { pageSlug } = React.useContext(LocaleContext)
-  const pathname = pages[pageSlug][lang]
+  const pathname = pages[pageSlug][lang].slug
 
   return <Link {...props} to={pathname} />
 }

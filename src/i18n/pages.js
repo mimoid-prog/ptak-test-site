@@ -1,46 +1,47 @@
+// prettier-ignore
 module.exports = {
   "/": {
-    pl: "/",
-    en: "/en",
+    pl: { slug: "/", active: true },
+    en: { slug: "/en", active: true },
   },
   "/for-visitors": {
-    pl: "/dla-odwiedzajacych",
-    en: "/en/for-visitors",
+    pl: { slug: "/dla-odwiedzajacych", active: true },
+    en: { slug: "/en/for-visitors", active: true },
   },
   "/for-exhibitors": {
-    pl: "/dla-wystawcow",
-    en: "/en/for-exhibitors",
+    pl: { slug: "/dla-wystawcow", active: true },
+    en: { slug: "/en/for-exhibitors", active: true },
   },
   "/contact": {
-    pl: "/kontakt",
-    en: "/en/contact",
+    pl: { slug: "/kontakt", active: true },
+    en: { slug: "/en/contact", active: true },
   },
   "/visitor-registration": {
-    pl: "/rejestracja-odwiedzajacego",
-    en: "/en/visitor-registration",
+    pl: { slug: "/rejestracja-odwiedzajacego", active: true },
+    en: { slug: "/en/visitor-registration", active: true },
   },
   "/exhibitor-registration": {
-    pl: "/rejestracja-wystawcy",
-    en: "/en/exhibitor-registration",
+    pl: { slug: "/rejestracja-wystawcy", active: true },
+    en: { slug: "/en/exhibitor-registration", active: true },
   },
   "/exhibitors-catalog-registration": {
-    pl: "/rejestracja-w-katalogu-wystawcow",
-    en: "/en/exhibitors-catalog-registration",
+    pl: { slug: "/rejestracja-w-katalogu-wystawcow", active: true },
+    en: { slug: "/en/exhibitors-catalog-registration", active: true },
   },
   "/visitor-registration/confirmation": {
-    pl: "/rejestracja-odwiedzajacego/potwierdzenie",
-    en: "/en/visitor-registration/confirmation",
+    pl: { slug: "/rejestracja-odwiedzajacego/potwierdzenie", active: true },
+    en: { slug: "/en/visitor-registration/confirmation", active: true },
   },
   "/exhibitor-registration/confirmation": {
-    pl: "/rejestracja-wystawcy/potwierdzenie",
-    en: "/en/exhibitor-registration/confirmation",
+    pl: { slug: "/rejestracja-wystawcy/potwierdzenie", active: true },
+    en: { slug: "/en/exhibitor-registration/confirmation", active: true },
   },
   "/exhibitors-catalog-registration/confirmation": {
-    pl: "/rejestracja-w-katalogu-wystawcow/potwierdzenie",
-    en: "/en/exhibitors-catalog-registration/confirmation",
+    pl: { slug: "/rejestracja-w-katalogu-wystawcow/potwierdzenie", active: true, },
+    en: { slug: "/en/exhibitors-catalog-registration/confirmation", active: true, },
   },
   "/exhibitors-catalog": {
-    pl: "/katalog-wystawcow",
-    en: "/en/exhibitors-catalog",
-  },
+    pl: { slug: "/katalog-wystawcow", active: true },
+    en: { slug: "/en/exhibitors-catalog", active: false },
+  }
 }

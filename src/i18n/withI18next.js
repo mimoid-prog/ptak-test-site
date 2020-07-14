@@ -15,7 +15,6 @@ const withI18next = () => Comp => {
 
     changeLanguage = () => {
       const { pageContext } = this.props
-      console.log("CONTEXT: ", pageContext)
 
       this.addResources(pageContext)
       this.i18n.changeLanguage(pageContext.locale)
