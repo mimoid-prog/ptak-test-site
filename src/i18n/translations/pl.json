@@ -2,10 +2,10 @@
   "global": {
     "name": "Warsaw Shop Expo",
     "desc": "Targi Wyposażenia i Akcesoriów dla Obiektów i Sieci Handlowych",
-    "date": "11-13 lipca 2020",
-    "firstDay": "11 lipca (sobota) 10:00 - 16:00",
-    "secondDay": "12 lipca (niedziela) 10:00 - 16:00",
-    "thirdDay": "13 lipca (poniedziałek) 10:00 - 15:00",
+    "date": "11-13 grudnia 2020",
+    "firstDay": "11 grudnia (sobota) 10:00 - 16:00",
+    "secondDay": "12 grudnia (niedziela) 10:00 - 16:00",
+    "thirdDay": "13 grudnia (poniedziałek) 10:00 - 15:00",
     "company": "Ptak Warsaw Expo",
     "street": "al. Katowicka 62",
     "postal": "05-830",
@@ -17,7 +17,7 @@
     "title": "Strona główna",
     "tillTheFair": "Do targów pozostało:",
     "timer": {
-      "date": "July 11, 2020",
+      "date": "December 11, 2020",
       "days": "d",
       "hours": "g",
       "minutes": "m",
