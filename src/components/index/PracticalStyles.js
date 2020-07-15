@@ -19,6 +19,10 @@ export const PracticalInner = styled.div`
     margin-bottom: 8px;
   }
 
+  ul {
+    list-style: none;
+  }
+
   li {
     margin-bottom: 4px;
 
@@ -37,10 +41,6 @@ export const PracticalInner = styled.div`
 
     h4 {
       margin-top: 0;
-    }
-
-    ul {
-      list-style: none;
     }
 
     div:nth-child(2) {

@@ -196,7 +196,7 @@ export const Menu = styled.ul`
 
     a {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 

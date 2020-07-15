@@ -24,9 +24,15 @@ const Practictal = () => {
           <div>
             <h4>{t("home.openingHours")}</h4>
             <ul>
-              <li>{t("global.firstDay")}</li>
-              <li>{t("global.secondDay")}</li>
-              <li>{t("global.thirdDay")}</li>
+              <li>
+                <Trans>{"global.firstDay"}</Trans>
+              </li>
+              <li>
+                <Trans>{"global.secondDay"}</Trans>
+              </li>
+              <li>
+                <Trans>{"global.thirdDay"}</Trans>
+              </li>
             </ul>
           </div>
           <div>

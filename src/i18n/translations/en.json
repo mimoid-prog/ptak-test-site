@@ -3,15 +3,13 @@
     "name": "Warsaw Shop Expo",
     "desc": "Trade Fair of Equipment and Accessories for Commercial Facilities and Networks",
     "date": "December 11-13, 2020",
-    "firstDay": "December 11 (Saturday) 10:00 - 16:00",
-    "secondDay": "December 12 (Sunday) 10:00 - 16:00",
-    "thirdDay": "December 13 (Monday) 10:00 - 15:00",
+    "firstDay": "December 11 (Saturday) <br/>10:00 - 16:00",
+    "secondDay": "December 12 (Sunday) <br/>10:00 - 16:00",
+    "thirdDay": "December 13 (Monday) <br/>10:00 - 15:00",
     "company": "Ptak Warsaw Expo",
     "street": "al. Katowicka 62",
     "postal": "05-830",
-    "city": "Nadarzyn",
-    "helpline": "(+48) 518 739 124",
-    "email": "info@warsawexpo.eu"
+    "city": "Nadarzyn"
   },
   "home": {
     "title": "Home",
