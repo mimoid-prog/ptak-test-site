@@ -1,11 +1,9 @@
-import React from "react"
+import { useEffect } from "react"
+import { navigate } from "gatsby"
 
-const Error = () => {
-  return (
-    <div>
-      <h2>Error</h2>
-    </div>
-  )
+export default () => {
+  useEffect(() => {
+    navigate("/")
+  }, [])
+  return null
 }
-
-export default Error

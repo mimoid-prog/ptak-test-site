@@ -6,12 +6,13 @@ const pages = require("./src/i18n/pages")
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
-  deletePage(page)
 
   const pathNoTrailingSlash =
     page.path === `/` ? page.path : page.path.replace(/\/$/, ``)
 
   if (pages.hasOwnProperty(pathNoTrailingSlash)) {
+    deletePage(page)
+
     Object.keys(pages[pathNoTrailingSlash]).map(lang => {
       let localizedPath = pages[pathNoTrailingSlash][lang].slug
 
