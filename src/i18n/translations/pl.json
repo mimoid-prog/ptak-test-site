@@ -132,6 +132,10 @@
     "openingHoursChange": "*godziny otwarcia mogą ulec zmianie",
     "farewell": "Do zobaczenia na targach!"
   },
+  "404": {
+    "title": "Strona nie została odnaleziona",
+    "button": "Wróć na stronę główną"
+  },
   "footer": {
     "headingOne": "Targi / Konferencje / Eventy",
     "headingTwo": "Stolica targów",

@@ -43,5 +43,13 @@ module.exports = {
   "/exhibitors-catalog": {
     pl: { slug: "/katalog-wystawcow", active: true },
     en: { slug: "/en/exhibitors-catalog", active: false },
-  }
+  },
+  "/404": {
+    pl: { slug: "/404", active: true },
+    en: { slug: "/en/404", active: true },
+  },
+  "/404.html": {
+    pl: { slug: "/404.html", active: true },
+    en: { slug: "/en/404.html", active: true },
+  },
 }

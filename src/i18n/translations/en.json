@@ -133,6 +133,10 @@
     "openingHoursChange": "*opening hours may change",
     "farewell": "See you at the fair!"
   },
+  "404": {
+    "title": "Page not found",
+    "button": "Homepage"
+  },
   "footer": {
     "headingOne": "Trade fairs / Conferences / Events",
     "headingTwo": "Trade fair capital",

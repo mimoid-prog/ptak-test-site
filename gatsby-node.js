@@ -17,7 +17,7 @@ exports.onCreatePage = ({ page, actions }) => {
       let localizedPath = pages[pathNoTrailingSlash][lang].slug
 
       if (pages[pathNoTrailingSlash][lang].active) {
-        return createPage({
+        const newPage = {
           ...page,
           path: localizedPath,
           context: {
@@ -26,7 +26,9 @@ exports.onCreatePage = ({ page, actions }) => {
             localeResources: resources[lang] ? resources[lang] : {},
             pageSlug: pathNoTrailingSlash,
           },
-        })
+        }
+
+        return createPage(newPage)
       }
     })
   }
