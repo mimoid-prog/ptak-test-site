@@ -50,6 +50,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-mongodb`,
+      options: {
+        connectionString: `mongodb+srv://Ptak:${process.env.PASSWORD}@cluster0-9w44v.mongodb.net`,
+        dbName: `ptak`,
+        collection: `globals`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

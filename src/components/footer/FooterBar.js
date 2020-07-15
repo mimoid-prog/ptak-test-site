@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { useStaticQuery, graphql } from "gatsby"
 
 export const FooterBarWrapper = styled.div`
   width: 100%;
@@ -35,25 +36,39 @@ export const FooterBarWrapper = styled.div`
 const FooterBar = () => {
   const { t } = useTranslation()
 
+  const data = useStaticQuery(graphql`
+    query {
+      allMongodbPtakGlobals {
+        edges {
+          node {
+            label
+            name
+            value
+          }
+        }
+      }
+    }
+  `).allMongodbPtakGlobals.edges
+
+  const linkPrivacy = data.filter(
+    item => item.node.name === "link-privacy-pl"
+  )[0].node.value
+
+  const linkFacilityRegulations = data.filter(
+    item => item.node.name === "link-facility-regulations-pl"
+  )[0].node.value
+
   return (
     <FooterBarWrapper>
       <p>© 2020 Ptak Warsaw Expo</p>
       <ul>
         <li>
-          <a
-            href="https://warsawexpo.eu/polityka-prywatnosci/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={linkPrivacy} target="_blank" rel="noreferrer">
             {t("footer.linkOne")}
           </a>
         </li>
         <li>
-          <a
-            href="https://warsawexpo.eu/wp-content/uploads/2019/08/Regulamin-obiektu-2019-TKFS-PL.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={linkFacilityRegulations} target="_blank" rel="noreferrer">
             {t("footer.linkTwo")}
           </a>
         </li>

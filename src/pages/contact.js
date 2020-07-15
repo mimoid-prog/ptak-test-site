@@ -4,6 +4,7 @@ import SEO from "utils/seo"
 import styled from "styled-components"
 import { Container } from "styles/GlobalStyles"
 import { useTranslation } from "react-i18next"
+import { useStaticQuery, graphql } from "gatsby"
 
 const GS = {}
 GS.Container = Container
@@ -90,6 +91,25 @@ S.Address = styled.div`
 const Contact = () => {
   const { t } = useTranslation()
 
+  const data = useStaticQuery(graphql`
+    query {
+      allMongodbPtakGlobals {
+        edges {
+          node {
+            label
+            name
+            value
+          }
+        }
+      }
+    }
+  `).allMongodbPtakGlobals.edges
+
+  const helpline = data.filter(item => item.node.name === "helpline")[0].node
+    .value
+
+  const email = data.filter(item => item.node.name === "email")[0].node.value
+
   return (
     <SecondaryLayout>
       <GS.Container>
@@ -132,8 +152,8 @@ const Contact = () => {
               <p>
                 {t("global.postal")}, {t("global.city")}
               </p>
-              <p>{t("global.helpline")}</p>
-              <p>{t("global.email")}</p>
+              <p>{helpline}</p>
+              <p>{email}</p>
             </div>
             <div>
               <iframe
