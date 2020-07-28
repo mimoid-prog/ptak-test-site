@@ -16,14 +16,14 @@ const Introduction = () => {
 
   const images = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "photos/home-image-1.webp" }) {
+      image1: file(relativePath: { eq: "photos/home-image-1.jpg" }) {
         childImageSharp {
           fixed(width: 250, height: 400, quality: 90) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
-      image2: file(relativePath: { eq: "photos/home-image-2.webp" }) {
+      image2: file(relativePath: { eq: "photos/home-image-2.jpg" }) {
         childImageSharp {
           fixed(width: 250, height: 400, quality: 90) {
             ...GatsbyImageSharpFixed_withWebp
