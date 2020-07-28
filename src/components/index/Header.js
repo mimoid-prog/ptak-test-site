@@ -6,6 +6,8 @@ import Logo from "images/logo.png"
 import Countdown from "react-countdown"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink as Link } from "components/links/LocalizedLink"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const GS = {}
 GS.Container = Container
@@ -43,11 +45,26 @@ const Header = () => {
     )
   }
 
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 250, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <S.Header>
       <GS.Container>
         <Navbar />
-        <S.Logo src={Logo} alt="Warsaw Shop Expo Logo" />
+        <Img
+          fixed={data.logo.childImageSharp.fixed}
+          alt="Warsaw Shop Expo Logo"
+        />
         <h1>{t("global.name")}</h1>
         <h2>{t("global.date")}</h2>
         <GS.PrimaryButton as={Link} to="/visitor-registration">
