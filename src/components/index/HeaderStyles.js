@@ -1,12 +1,14 @@
 import styled from "styled-components"
-import headerBg from "images/header-bg.jpg"
+import BackgroundImage from "gatsby-background-image"
 
-export const Header = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${headerBg});
+export const Header = styled(BackgroundImage)`
   text-align: center;
   color: white;
   padding-bottom: 40px;
+  opacity: 1 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  width: 100%;
 
   h2 {
     margin-bottom: 40px;

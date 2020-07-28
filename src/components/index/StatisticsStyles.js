@@ -1,9 +1,12 @@
 import styled from "styled-components"
-import headerBg from "images/header-bg.jpg"
 
-export const Statistics = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${headerBg});
+import BackgroundImage from "gatsby-background-image"
+
+export const Statistics = styled(BackgroundImage)`
+  opacity: 1 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  width: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding-bottom: 60px;

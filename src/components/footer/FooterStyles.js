@@ -1,11 +1,15 @@
 import styled from "styled-components"
-import footerBg from "images/footer/footer-bg.jpg"
+import BackgroundImage from "gatsby-background-image"
 
 export const Footer = styled.footer``
 
+export const Bg = styled(BackgroundImage)`
+  opacity: 1 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+`
+
 export const Content = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(${footerBg});
   color: white;
   padding: 30px 0 40px;
 

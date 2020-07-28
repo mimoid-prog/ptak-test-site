@@ -2,7 +2,6 @@ import React from "react"
 import * as S from "./HeaderStyles"
 import { Container, PrimaryButton } from "styles/GlobalStyles"
 import Navbar from "components/navbar/Navbar"
-import Logo from "images/logo.png"
 import Countdown from "react-countdown"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink as Link } from "components/links/LocalizedLink"
@@ -49,8 +48,15 @@ const Header = () => {
     query {
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 250, quality: 100) {
+          fixed(width: 250, quality: 90) {
             ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      header: file(relativePath: { eq: "bg.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -58,7 +64,7 @@ const Header = () => {
   `)
 
   return (
-    <S.Header>
+    <S.Header fluid={data.header.childImageSharp.fluid}>
       <GS.Container>
         <Navbar />
         <Img

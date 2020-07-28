@@ -11,6 +11,7 @@ import visitors from "images/icons/visitor.svg"
 import exhibitors from "images/icons/exhibitor.svg"
 import area from "images/icons/area.svg"
 import conference from "images/icons/study.svg"
+import { useStaticQuery, graphql } from "gatsby"
 
 const GS = {}
 GS.Container = Container
@@ -21,8 +22,20 @@ GS.OutlinedButton = OutlinedButton
 const Statistics = () => {
   const { t } = useTranslation()
 
+  const data = useStaticQuery(graphql`
+    query {
+      header: file(relativePath: { eq: "bg.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <S.Statistics>
+    <S.Statistics fluid={data.header.childImageSharp.fluid}>
       <GS.Container>
         <S.StatisticsInner>
           <GS.TertiaryTitle>{t("home.statistics.title")}</GS.TertiaryTitle>

@@ -2,8 +2,6 @@ import React from "react"
 import * as S from "./IntroductionStyles"
 import { useTranslation } from "react-i18next"
 import { Container, SecondaryTitle } from "styles/GlobalStyles"
-import img1 from "images/photos/photo1.webp"
-import img2 from "images/photos/photo2.webp"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -32,8 +30,6 @@ const Introduction = () => {
       }
     }
   `)
-
-  console.log(images)
 
   return (
     <S.Introduction>
