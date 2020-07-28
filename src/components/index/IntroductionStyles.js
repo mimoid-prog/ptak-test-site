@@ -20,14 +20,10 @@ export const IntroductionInner = styled.div`
 
   & > div:first-child {
     display: grid;
-    grid-template-columns: 20px auto 20px;
-    grid-template-rows: 40px auto 40px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    grid-template-columns: 20px 230px 20px;
+    grid-template-rows: 20px 380px 20px;
+    width: 270px;
+    margin: 0 auto;
 
     div:first-child {
       grid-column: 1 / 3;
@@ -42,10 +38,8 @@ export const IntroductionInner = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     & > div:first-child {
-      width: 70%;
-      margin: 0 auto;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 40px auto 40px;
+      grid-template-columns: 70px 180px 70px;
+      grid-template-rows: 40px 360px 40px;
 
       div:first-child {
         grid-column: 1 / 3;
@@ -66,9 +60,10 @@ export const IntroductionInner = styled.div`
     }
 
     & > div:first-child {
-      width: 40%;
       margin-right: 40px;
-      grid-template-columns: 1fr 20px 1fr;
+      grid-template-columns: 250px 20px 250px;
+      margin-left: 0;
+      width: 520px;
 
       div:first-child {
         grid-column: 1 / 2;
@@ -80,7 +75,7 @@ export const IntroductionInner = styled.div`
     }
 
     & > div:last-child {
-      width: 60%;
+      width: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -95,12 +90,7 @@ export const IntroductionInner = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-    & > div:first-child {
-      width: 50%;
-    }
-
     & > div:last-child {
-      width: 50%;
       padding: 80px 0;
     }
   }
