@@ -25,7 +25,6 @@ const Visitor = mongoose.model("Visitor", visitorSchema)
 
 module.exports = (req, res) => {
   const values = req.body.values
-  res.json({ values })
 
   QRCode.toDataURL(values.email)
     .then(newQR => {
