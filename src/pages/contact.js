@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { Container } from "styles/GlobalStyles"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
+import localizedNavigate from "utils/localizedNavigate"
 
 const GS = {}
 GS.Container = Container
@@ -90,6 +91,8 @@ S.Address = styled.div`
 
 const Contact = () => {
   const { t } = useTranslation()
+
+  localizedNavigate("/visitor-registration/confirmation", "en")
 
   const data = useStaticQuery(graphql`
     query {
