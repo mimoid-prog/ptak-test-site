@@ -7,7 +7,7 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connected to database"))
-  .catch(error => res.status(400).json({ error: "Connecting database error" }))
+  .catch(() => res.status(400).json({ error: "Connecting database error" }))
 
 const companySchema = new mongoose.Schema({
   company: { type: String, maxlength: 40, required: true },
