@@ -60,7 +60,8 @@ const VisitorForm = () => {
               },
             })
           })
-          .catch(() => {
+          .catch(err => {
+            console.log(err)
             setIsLoading(false)
             setErrorMessage(t("form.error"))
           })

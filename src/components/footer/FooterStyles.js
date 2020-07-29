@@ -6,6 +6,7 @@ export const Footer = styled.footer``
 export const Bg = styled(BackgroundImage)`
   opacity: 1 !important;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-color: #403c36;
   background-size: cover;
 `
 
