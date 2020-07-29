@@ -24,7 +24,8 @@ visitorSchema.plugin(uniqueValidator)
 const Visitor = mongoose.model("Visitor", visitorSchema)
 
 module.exports = (req, res) => {
-  // const values = req.body.values
+  const values = req.body.values
+  res.json({ values })
 
   // QRCode.toDataURL(values.email)
   //   .then(newQR => {
@@ -51,6 +52,4 @@ module.exports = (req, res) => {
   //     console.error(err)
   //     res.status(400).json({ error: "Creating QR code error" })
   //   })
-
-  res.json({ qr: "oj tak" })
 }
