@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
     src: 
       url(${poppinsRegularWOFF2}) format('woff2'),
       url(${poppinsRegularWOFF}) format('woff'),
@@ -34,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
     src:
       url(${poppinsBoldWOFF2}) format('woff2'),
       url(${poppinsBoldWOFF}) format('woff'),

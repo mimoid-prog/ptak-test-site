@@ -6,9 +6,8 @@ export const Header = styled(BackgroundImage)`
   color: white;
   padding-bottom: 40px;
   opacity: 1 !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-size: cover;
-  background-color: #403c36;
   width: 100%;
 
   h2 {
