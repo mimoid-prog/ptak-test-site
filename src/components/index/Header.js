@@ -55,7 +55,7 @@ const Header = () => {
       }
       header: file(relativePath: { eq: "bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
