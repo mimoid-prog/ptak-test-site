@@ -1,17 +1,21 @@
+const dotenv = require("dotenv")
+dotenv.config()
+
 const express = require("express")
 const mongoose = require("mongoose")
-require("dotenv").config()
-
-const visitors = require("./routes/visitors")
-const exhibitors = require("./routes/exhibitors")
-const companies = require("./routes/companies")
 
 const app = express()
 app.use(express.json())
 
+const visitors = require("./routes/visitors")
+const exhibitors = require("./routes/exhibitors")
+const companies = require("./routes/companies")
+const ptakDevelopers = require("./routes/ptakDevelopers")
+
 app.use("/api/visitors", visitors)
 app.use("/api/exhibitors", exhibitors)
 app.use("/api/companies", companies)
+app.use("/api/ptak-developers", ptakDevelopers)
 
 mongoose
   .connect(
