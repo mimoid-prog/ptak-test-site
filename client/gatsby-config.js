@@ -1,7 +1,7 @@
 const path = require("path")
 
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `../.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
@@ -44,16 +44,16 @@ module.exports = {
     {
       resolve: `gatsby-source-mongodb`,
       options: {
-        connectionString: `mongodb+srv://Ptak:${process.env.PASSWORD}@cluster0-9w44v.mongodb.net`,
-        dbName: `test`,
+        connectionString: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}.mongodb.net`,
+        dbName: process.env.DB_NAME,
         collection: `companies`,
       },
     },
     {
       resolve: `gatsby-source-mongodb`,
       options: {
-        connectionString: `mongodb+srv://Ptak:${process.env.PASSWORD}@cluster0-9w44v.mongodb.net`,
-        dbName: `ptak`,
+        connectionString: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}.mongodb.net`,
+        dbName: process.env.DB_NAME,
         collection: `globals`,
       },
     },
@@ -66,12 +66,9 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
