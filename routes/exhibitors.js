@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Exhibitor = require("../models/Exhibitor");
+const Exhibitor = require("../models/exhibitor");
 
 router.post("/exhibitor", (req, res) => {
   const values = req.body.values;

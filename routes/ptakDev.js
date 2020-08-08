@@ -10,9 +10,9 @@ const corsOptions = {
 const router = express.Router();
 router.use(cors(corsOptions));
 
-const Visitor = require("../models/Visitor");
-const Exhibitor = require("../models/Exhibitor");
-const Company = require("../models/Company");
+const Visitor = require("../models/visitor");
+const Exhibitor = require("../models/exhibitor");
+const Company = require("../models/company");
 
 router.get(
   "/fetch-collections",

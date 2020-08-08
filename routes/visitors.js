@@ -3,7 +3,7 @@ const router = express.Router();
 
 const QRCode = require("qrcode");
 
-const Visitor = require("../models/Visitor");
+const Visitor = require("../models/visitor");
 
 router.post("/visitor", (req, res) => {
   const values = req.body.values;

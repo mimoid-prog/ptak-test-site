@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Company = require("../models/Company");
+const Company = require("../models/company");
 
 router.post("/api/company", (req, res) => {
   const values = req.body.values;
