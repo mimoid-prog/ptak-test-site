@@ -1,7 +1,6 @@
 const path = require(`path`)
 
 const locales = require("./src/i18n/locales")
-const resources = require("./src/i18n/resources")
 const pages = require("./src/i18n/pages")
 
 exports.onCreatePage = ({ page, actions }) => {
@@ -23,7 +22,6 @@ exports.onCreatePage = ({ page, actions }) => {
           context: {
             ...page.context,
             locale: lang,
-            localeResources: resources[lang] ? resources[lang] : {},
             pageSlug: pathNoTrailingSlash,
           },
         }
