@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { I18nextProvider } from "react-i18next"
 import LocaleContext from "../localeContext"
-
 import setupI18next from "./setupI18next"
+
+const resources = require("./resources")
 
 const withI18next = () => Comp => {
   class I18nHOC extends Component {
@@ -23,15 +24,9 @@ const withI18next = () => Comp => {
     // @see https://www.i18next.com/overview/api#resource-handling
     // `translation` is the default NS we use consistently.
     addResources = pageContext => {
-      if (
-        pageContext &&
-        pageContext.localeResources &&
-        pageContext.localeResources.translation
-      ) {
-        const {
-          locale: lng,
-          localeResources: { translation },
-        } = pageContext
+      if (pageContext) {
+        const { locale: lng } = pageContext
+        const translation = resources[lng].translation
 
         if (!this.i18n.hasResourceBundle(lng, "translation")) {
           this.i18n.addResourceBundle(lng, "translation", translation)
