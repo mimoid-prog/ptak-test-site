@@ -27,7 +27,7 @@ router.get(
       const collections = names.map((name) => name.name);
       res.json({ collections });
     });
-  }
+  },
 );
 
 router.post(
@@ -73,7 +73,7 @@ router.post(
     } else {
       res.status(400).json({ message: "Brak takiej kolekcji" });
     }
-  }
+  },
 );
 
 module.exports = router;

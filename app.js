@@ -1,5 +1,4 @@
-const dotenv = require("dotenv");
-dotenv.config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -29,5 +28,5 @@ app.use("/api", exhibitors);
 app.use("/api", companies);
 app.use("/api/ptak-dev", ptakDev);
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
