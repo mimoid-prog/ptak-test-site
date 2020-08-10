@@ -58,6 +58,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "resolutions": {
-    "sharp": "0.22.1"
+    "gatsby-plugin-sharp/sharp": "^0.22.1",
+    "gatsby-transformer-sharp/sharp": "^0.22.1",
+    "gatsby-plugin-manifest/sharp": "^0.22.1"
   }
 }
