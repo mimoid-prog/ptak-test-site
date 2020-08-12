@@ -2,15 +2,17 @@ import React, { useState } from "react"
 import { PrimaryButton } from "styles/GlobalStyles"
 import * as S from "./NavbarStyles"
 import ptakLogo from "images/ptak-white.png"
-import UKFlag from "images/icons/uk.svg"
-import PLFlag from "images/icons/pl.svg"
-import arrow from "images/icons/arrow.svg"
 import { useTranslation } from "react-i18next"
 import { LocalizedLink as Link } from "components/links/LocalizedLink"
 import LanguageLink from "components/links/LanguageLink"
 import LocaleContext from "src/localeContext"
 const locales = require("i18n/locales")
 const pages = require("i18n/pages")
+
+/*images*/
+import arrow from "images/icons/arrow.svg"
+import UKFlag from "images/icons/uk.svg"
+import PLFlag from "images/icons/pl.svg"
 
 const GS = {}
 GS.PrimaryButton = PrimaryButton
